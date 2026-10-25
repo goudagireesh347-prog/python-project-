@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Food Waste Prediction - ML Engine{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-cpu-fill text-warning me-2"></i>Smart Food Waste Prediction (ML)
+        </h2>
+        <p class="text-muted mb-0">Estimate potential food loss using Scikit-learn Machine Learning before spoilage happens</p>
+    </div>
+    <div>
+        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+            <i class="bi bi-check-circle-fill me-1"></i> Model Active: {{ metrics.model_name }}
+        </span>
+    </div>
+</div>
+
+<!-- ML Model Evaluation Metrics & Transparency Card -->
+<div class="card border-0 shadow-sm p-4 mb-4 bg-white">
+    <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center mb-2">
+                <span class="badge bg-warning text-dark me-2 fw-semibold">Scikit-learn Regressor</span>
+                <span class="text-muted small">Trained on {{ metrics.total_samples }} synthetic benchmark cases</span>
+            </div>
+            <p class="small text-muted mb-0">
+                <strong>Model Transparency Notice:</strong> This machine learning model uses a <code>RandomForestRegressor</code> pipeline trained on synthetic kitchen food consumption distributions. Predictions provide comparative estimation and risk scoring to aid purchasing and meal planning.
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-around text-center p-2 bg-light rounded-3 border">
+                <div>
+                    <span class="d-block small text-muted fw-semibold">R&sup2; Score</span>
+                    <strong class="text-success fs-5">{{ metrics.r2_score }}</strong>
+                </div>
+                <div class="border-start border-end px-3">
+                    <span class="d-block small text-muted fw-semibold">MAE</span>
+                    <strong class="text-primary fs-5">{{ metrics.mae }} kg</strong>
+                </div>
+                <div>
+                    <span class="d-block small text-muted fw-semibold">RMSE</span>
+                    <strong class="text-secondary fs-5">{{ metrics.rmse }} kg</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <!-- Prediction Input Form -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+                <div class="metric-icon-box metric-icon-green me-3">
+                    <i class="bi bi-sliders fs-4 text-success"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold mb-0 text-dark">Food Parameters</h5>
+                    <small class="text-muted">Enter food specifications to forecast waste risk</small>
+                </div>
+            </div>
+
+            <form method="POST" action="{{ url_for('predictions') }}">
+                <div class="row g-3">
+                    <!-- Category -->
+                    <div class="col-md-7">
+                        <label for="category" class="form-label fw-semibold">Food Category</label>
+                        <select class="form-select" id="category" name="category" required>
+                            {% for cat in categories %}
+                                <option value="{{ cat }}" {% if form_data.get('category') == cat %}selected{% endif %}>{{ cat }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Quantity Purchased -->
+                    <div class="col-md-5">
+                        <label for="quantity" class="form-label fw-semibold">Quantity Purchased</label>
+                        <div class="input-group">
+                            <input type="number" step="0.1" min="0.1" class="form-control" id="quantity" name="quantity" value="{{ form_data.get('quantity', 3.0) }}" required>
+                            <select class="form-select" name="unit" style="max-width: 80px;">
+                                <option value="kg" selected>kg</option>
+                                <option value="liters">L</option>
+                                <option value="items">pcs</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Shelf Life Days -->
+                    <div class="col-md-6">
+                        <label for="shelf_life" class="form-label fw-semibold">Total Shelf Life (Days)</label>
+                        <input type="number" min="1" max="365" class="form-control" id="shelf_life" name="shelf_life" value="{{ form_data.get('shelf_life', 7) }}" required>
+                        <div class="form-text">e.g., Bread: 5d, Milk: 10d, Apples: 14d</div>
+                    </div>
+
+                    <!-- Days Remaining Before Expiry -->
+                    <div class="col-md-6">
+                        <label for="days_remaining" class="form-label fw-semibold">Days Remaining to Expiry</label>
+                        <input type="number" min="0" max="365" class="form-control" id="days_remaining" name="days_remaining" value="{{ form_data.get('days_remaining', 2) }}" required>
+                        <div class="form-text">How many days until use-by date?</div>
+                    </div>
+
+                    <!-- Storage Type -->
+                    <div class="col-md-6">
+                        <label for="storage_type" class="form-label fw-semibold">Storage Method</label>
+                        <select class="form-select" id="storage_type" name="storage_type">
+                            <option value="Refrigerator" {% if form_data.get('storage_type') == 'Refrigerator' %}selected{% endif %}>❄️ Refrigerator</option>
+                            <option value="Freezer" {% if form_data.get('storage_type') == 'Freezer' %}selected{% endif %}>🧊 Freezer</option>
+                            <option value="Pantry / Room Temp" {% if form_data.get('storage_type') == 'Pantry / Room Temp' %}selected{% endif %}>🍞 Pantry / Room Temp</option>
+                        </select>
+                    </div>
+
+                    <!-- Diners / Consumers -->
+                    <div class="col-md-6">
+                        <label for="household_diners" class="form-label fw-semibold">Consumers / Diners</label>
+                        <input type="number" min="1" max="50" class="form-control" id="household_diners" name="household_diners" value="{{ form_data.get('household_diners', 3) }}" required>
+                        <div class="form-text">Number of people eating</div>
+                    </div>
+
+                    <!-- Consumption Pace -->
+                    <div class="col-12">
+                        <label for="consumption_pace" class="form-label fw-semibold">Expected Consumption Rate</label>
+                        <select class="form-select" id="consumption_pace" name="consumption_pace">
+                            <option value="Slow" {% if form_data.get('consumption_pace') == 'Slow' %}selected{% endif %}>Slow (e.g., dining out often, busy schedule)</option>
+                            <option value="Moderate" {% if form_data.get('consumption_pace') == 'Moderate' or not form_data %}selected{% endif %}>Moderate (standard daily home meals)</option>
+                            <option value="Fast" {% if form_data.get('consumption_pace') == 'Fast' %}selected{% endif %}>Fast (heavy cooking / daily meal prep)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-2">
+                    <button type="submit" class="btn btn-eco-orange w-100 py-2 fs-6 shadow-sm">
+                        <i class="bi bi-magic me-1"></i> Run ML Spoilage Forecast
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Prediction Results Display -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+                <div class="metric-icon-box metric-icon-orange me-3">
+                    <i class="bi bi-graph-up-arrow fs-4 text-warning"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold mb-0 text-dark">Forecast Output</h5>
+                    <small class="text-muted">Estimated waste volume and tailored interventions</small>
+                </div>
+            </div>
+
+            {% if prediction_result %}
+                <div class="p-3 bg-light rounded-3 mb-3 border">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="fw-semibold text-muted">Predicted Waste Risk</span>
+                        <span class="badge {{ prediction_result.risk_badge }} fs-6 px-3 py-1 rounded-pill">
+                            {{ prediction_result.risk_level }}
+                        </span>
+                    </div>
+
+                    <div class="row text-center my-3 g-2">
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded-3 border">
+                                <span class="d-block small text-muted">Estimated Waste</span>
+                                <h3 class="fw-bold text-danger mb-0">
+                                    {{ prediction_result.predicted_waste_quantity }} <small class="fs-6">{{ form_data.get('unit', 'kg') }}</small>
+                                </h3>
+                                <span class="small text-danger">({{ prediction_result.predicted_waste_percentage }}% loss)</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded-3 border">
+                                <span class="d-block small text-muted">Expected Consumed</span>
+                                <h3 class="fw-bold text-success mb-0">
+                                    {{ prediction_result.saved_quantity }} <small class="fs-6">{{ form_data.get('unit', 'kg') }}</small>
+                                </h3>
+                                <span class="small text-success">Safe to eat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress mb-2" style="height: 12px;">
+                        <div class="progress-bar bg-danger" role="progressbar" 
+                             style="width: {{ prediction_result.predicted_waste_percentage }}%;" 
+                             aria-valuenow="{{ prediction_result.predicted_waste_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted">
+                        <span>0% Waste</span>
+                        <span>100% Waste</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Smart Recommendations -->
+                <h6 class="fw-bold text-dark mb-2">
+                    <i class="bi bi-lightbulb-fill text-warning me-1"></i>Tailored Reduction Recommendations
+                </h6>
+                <div class="mb-3">
+                    {% for rec in prediction_result.recommendations %}
+                    <div class="recommendation-card p-2 small mb-2">
+                        {{ rec }}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="alert alert-light border small text-muted mb-0">
+                    <i class="bi bi-info-circle me-1"></i>
+                    {{ prediction_result.disclaimer }}
+                </div>
+            {% else %}
+                <div class="text-center py-5 my-auto text-muted">
+                    <i class="bi bi-cpu fs-1 text-secondary opacity-50 d-block mb-3"></i>
+                    <h6 class="fw-bold">No Prediction Calculated Yet</h6>
+                    <p class="small text-muted mb-3" style="max-width: 320px; margin: 0 auto;">
+                        Adjust the food parameters on the left and click <strong>"Run ML Spoilage Forecast"</strong> to evaluate potential waste risk.
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Past Predictions History Table -->
+<div class="card border-0 shadow-sm p-4">
+    <h5 class="fw-bold mb-3 text-dark">
+        <i class="bi bi-clock-history text-success me-2"></i>Recent Prediction Log
+    </h5>
+
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Storage</th>
+                    <th>Days to Expiry</th>
+                    <th>Predicted Waste</th>
+                    <th>Risk Level</th>
+                    <th>Recommendation Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if recent_predictions %}
+                    {% for p in recent_predictions %}
+                    <tr>
+                        <td><small class="text-muted">{{ p.prediction_date.strftime('%Y-%m-%d %H:%M') }}</small></td>
+                        <td><span class="badge bg-light text-dark border">{{ p.food_category }}</span></td>
+                        <td>{{ p.quantity_purchased }} {{ p.unit }}</td>
+                        <td>{{ p.storage_type }}</td>
+                        <td>{{ p.days_to_expiry }}d</td>
+                        <td>
+                            <strong class="text-danger">{{ p.predicted_waste_quantity }} {{ p.unit }}</strong>
+                            <small class="text-muted">({{ p.predicted_waste_percentage }}%)</small>
+                        </td>
+                        <td>
+                            {% if p.waste_risk_level == 'Low' or p.waste_risk_level == 'Low Risk' %}
+                                <span class="badge bg-success">Low</span>
+                            {% elif p.waste_risk_level == 'Moderate' or p.waste_risk_level == 'Moderate Risk' %}
+                                <span class="badge bg-warning text-dark">Moderate</span>
+                            {% else %}
+                                <span class="badge bg-danger">High</span>
+                            {% endif %}
+                        </td>
+                        <td><small class="text-muted text-truncate d-inline-block" style="max-width: 250px;">{{ p.recommendation or 'Standard meal prep' }}</small></td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="8" class="text-center py-4 text-muted">
+                            No past predictions recorded. Run your first forecast above!
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

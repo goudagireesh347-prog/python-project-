@@ -1,0 +1,406 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<!-- Header Bar -->
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-speedometer2 text-success me-2"></i>Kitchen Dashboard
+        </h2>
+        <p class="text-muted mb-0">Overview for <strong>{{ current_user.full_name or current_user.username }}</strong> &bull; Facility: <span class="badge bg-light text-dark border">{{ current_user.organization_type }}</span></p>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('add_food') }}" class="btn btn-eco-primary shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i> Add Food Item
+        </a>
+        <a href="{{ url_for('predictions') }}" class="btn btn-eco-orange shadow-sm">
+            <i class="bi bi-cpu me-1"></i> Predict Waste
+        </a>
+    </div>
+</div>
+
+<!-- Critical Expiry Alert Banner -->
+{% if expiring_soon_count > 0 or expired_count > 0 %}
+<div class="alert alert-urgent-box mb-4 shadow-sm">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-exclamation-triangle-fill text-warning fs-2 me-3"></i>
+            <div>
+                <h5 class="fw-bold mb-1 text-dark">Urgent Expiry Notice</h5>
+                <p class="mb-0 text-muted small">
+                    You have <strong class="text-warning-emphasis">{{ expiring_soon_count }} item(s) expiring within 3 days</strong>
+                    {% if expired_count > 0 %}
+                    and <strong class="text-danger">{{ expired_count }} expired item(s)</strong> that must be handled safely!
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="{{ url_for('expiry_alerts') }}" class="btn btn-warning text-dark fw-bold btn-sm shadow-sm">
+                <i class="bi bi-bell-fill me-1"></i> Review Expiry Alerts
+            </a>
+            <a href="{{ url_for('donations') }}" class="btn btn-outline-dark btn-sm">
+                <i class="bi bi-heart me-1"></i> Donate Safe Surplus
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 6 Main KPI Metric Cards -->
+<div class="row g-3 mb-4">
+    <!-- 1. Total Food Items -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Active Inventory</span>
+                <div class="metric-icon-box metric-icon-green" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-box-seam"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-dark">{{ total_active_items }}</h3>
+            <span class="small text-muted">{{ fresh_count }} safe &amp; fresh</span>
+        </div>
+    </div>
+
+    <!-- 2. Expiring Soon -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard border-orange">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Expiring &le; 3 Days</span>
+                <div class="metric-icon-box metric-icon-orange" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-hourglass-bottom"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-warning">{{ expiring_soon_count }}</h3>
+            <span class="small text-muted">Requires prompt use</span>
+        </div>
+    </div>
+
+    <!-- 3. Expired Items -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard border-danger">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Expired Food</span>
+                <div class="metric-icon-box metric-icon-red" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-x-octagon-fill"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-danger">{{ expired_count }}</h3>
+            <span class="small text-muted">Do not consume</span>
+        </div>
+    </div>
+
+    <!-- 4. Total Waste Recorded -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard border-danger">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Total Wasted</span>
+                <div class="metric-icon-box metric-icon-red" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-trash3"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-dark">{{ total_waste_qty }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-danger fw-semibold">${{ "%.2f"|format(total_waste_cost) }} lost</span>
+        </div>
+    </div>
+
+    <!-- 5. Food Saved -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Food Saved</span>
+                <div class="metric-icon-box metric-icon-green" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-success">{{ food_saved_qty }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-success fw-semibold">{{ food_saved_count }} items eaten</span>
+        </div>
+    </div>
+
+    <!-- 6. Donations Available -->
+    <div class="col-sm-6 col-lg-4 col-xl-2">
+        <div class="card p-3 h-100 card-dashboard border-info">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Active Donations</span>
+                <div class="metric-icon-box metric-icon-blue" style="width: 36px; height: 36px; font-size: 1.1rem;">
+                    <i class="bi bi-heart"></i>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0 text-primary">{{ active_donations_count }}</h3>
+            <span class="small text-muted">{{ total_donations_completed }} completed</span>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row g-4 mb-4">
+    <!-- Chart 1: Monthly Waste Trends -->
+    <div class="col-lg-7">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-graph-up text-success me-2"></i>Monthly Food Waste Trend (kg)
+                </h5>
+                <span class="badge bg-light text-muted border">6 Months</span>
+            </div>
+            <div style="position: relative; height: 260px;">
+                <canvas id="monthlyWasteChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart 2: Waste by Category -->
+    <div class="col-lg-5">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-pie-chart text-warning me-2"></i>Waste by Food Category
+                </h5>
+                <a href="{{ url_for('reports') }}" class="small text-success text-decoration-none fw-semibold">View All</a>
+            </div>
+            <div style="position: relative; height: 260px;">
+                <canvas id="categoryWasteChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Inventory Items Table -->
+<div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+        <div>
+            <h5 class="fw-bold mb-0 text-dark">
+                <i class="bi bi-clock-history text-success me-2"></i>Priority Inventory (Nearest Expiry)
+            </h5>
+            <small class="text-muted">Items sorted by urgency</small>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="{{ url_for('inventory') }}" class="btn btn-outline-success btn-sm">
+                <i class="bi bi-list-ul me-1"></i> Full Inventory
+            </a>
+            <a href="{{ url_for('add_food') }}" class="btn btn-eco-primary btn-sm">
+                <i class="bi bi-plus-lg me-1"></i> Add Food
+            </a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-custom table-hover align-middle mb-0">
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Storage</th>
+                    <th>Expiry Date</th>
+                    <th>Freshness Status</th>
+                    <th class="text-end">Quick Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if recent_items %}
+                    {% for item in recent_items %}
+                    <tr>
+                        <td>
+                            <strong class="text-dark">{{ item.food_name }}</strong>
+                            {% if item.notes %}
+                            <div class="small text-muted text-truncate" style="max-width: 200px;">{{ item.notes }}</div>
+                            {% endif %}
+                        </td>
+                        <td><span class="badge bg-light text-dark border">{{ item.category }}</span></td>
+                        <td><strong>{{ item.quantity }}</strong> <small class="text-muted">{{ item.unit }}</small></td>
+                        <td><i class="bi bi-snow text-primary me-1"></i>{{ item.storage_type }}</td>
+                        <td>
+                            <div>{{ item.expiry_date.strftime('%b %d, %Y') }}</div>
+                            <small class="text-muted">
+                                {% if item.days_remaining < 0 %}
+                                    <span class="text-danger fw-semibold">{{ item.days_remaining|abs }} days ago</span>
+                                {% elif item.days_remaining == 0 %}
+                                    <span class="text-warning fw-semibold">Today!</span>
+                                {% else %}
+                                    <span class="text-success">{{ item.days_remaining }} days left</span>
+                                {% endif %}
+                            </small>
+                        </td>
+                        <td>
+                            {% if item.expiry_status == 'fresh' %}
+                                <span class="badge badge-fresh"><i class="bi bi-check-circle me-1"></i>Fresh</span>
+                            {% elif item.expiry_status == 'expiring_soon' %}
+                                <span class="badge badge-expiring"><i class="bi bi-exclamation-circle me-1"></i>Expiring Soon</span>
+                            {% else %}
+                                <span class="badge badge-expired"><i class="bi bi-x-circle me-1"></i>Expired</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            <div class="btn-group btn-group-sm">
+                                {% if item.expiry_status != 'expired' %}
+                                <form method="POST" action="{{ url_for('mark_consumed', item_id=item.id) }}" class="d-inline">
+                                    <button type="submit" class="btn btn-outline-success btn-sm" title="Mark as Eaten (Saved)">
+                                        <i class="bi bi-check-lg"></i> Consumed
+                                    </button>
+                                </form>
+                                {% endif %}
+                                <button type="button" class="btn btn-outline-danger btn-sm" 
+                                        data-bs-toggle="modal" data-bs-target="#logWasteModal"
+                                        data-item-id="{{ item.id }}"
+                                        data-item-name="{{ item.food_name }}"
+                                        data-item-qty="{{ item.quantity }}"
+                                        data-item-unit="{{ item.unit }}"
+                                        data-action="{{ url_for('mark_wasted', item_id=item.id) }}"
+                                        title="Log to Waste Tracking">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                                <a href="{{ url_for('edit_food', item_id=item.id) }}" class="btn btn-outline-secondary btn-sm" title="Edit Item">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="7" class="text-center py-4 text-muted">
+                            <i class="bi bi-inbox fs-3 d-block mb-2"></i>
+                            No food items currently in inventory. Click <strong>"Add Food Item"</strong> to get started!
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal: Log Waste from Inventory -->
+<div class="modal fade" id="logWasteModal" tabindex="-1" aria-labelledby="logWasteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title fw-bold" id="logWasteModalLabel">
+                    <i class="bi bi-trash3 text-danger me-2"></i>Log Item as Food Waste
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="wasteModalForm" method="POST" action="">
+                <div class="modal-body">
+                    <p class="mb-3">Item: <strong id="modalWasteFoodName" class="text-dark"></strong></p>
+                    <div class="mb-3">
+                        <label for="wasteReason" class="form-label fw-semibold">Reason for Waste</label>
+                        <select class="form-select" id="wasteReason" name="reason" required>
+                            <option value="Past Expiry Date" selected>Past Expiry Date</option>
+                            <option value="Spoiled / Mold">Spoiled / Mold</option>
+                            <option value="Plate Waste / Leftovers">Plate Waste / Leftovers</option>
+                            <option value="Overcooked / Burnt">Overcooked / Burnt</option>
+                            <option value="Storage Failure">Storage Failure / Fridge Left Open</option>
+                            <option value="Over-purchased">Over-purchased</option>
+                        </select>
+                    </div>
+                    <small class="text-muted">This will remove the item from active inventory and save it into your Waste Analytics.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Record Food Waste</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Monthly Waste Chart (Line / Bar)
+    const monthLabels = {{ chart_month_labels | tojson }};
+    const monthData = {{ chart_month_data | tojson }};
+
+    const ctxMonth = document.getElementById('monthlyWasteChart');
+    if (ctxMonth) {
+        new Chart(ctxMonth, {
+            type: 'line',
+            data: {
+                labels: monthLabels,
+                datasets: [{
+                    label: 'Food Wasted (kg)',
+                    data: monthData,
+                    borderColor: '#198754',
+                    backgroundColor: 'rgba(25, 135, 84, 0.12)',
+                    borderWidth: 2.5,
+                    tension: 0.35,
+                    fill: true,
+                    pointBackgroundColor: '#f57c00',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: value => value + ' kg' },
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    // 2. Category Waste Chart (Doughnut)
+    const catLabels = {{ chart_category_labels | tojson }};
+    const catData = {{ chart_category_data | tojson }};
+
+    const ctxCat = document.getElementById('categoryWasteChart');
+    if (ctxCat) {
+        if (catData.length === 0) {
+            // Placeholder if no waste yet
+            new Chart(ctxCat, {
+                type: 'doughnut',
+                data: {
+                    labels: ['No Waste Recorded'],
+                    datasets: [{
+                        data: [1],
+                        backgroundColor: ['#e2e8f0']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        } else {
+            new Chart(ctxCat, {
+                type: 'doughnut',
+                data: {
+                    labels: catLabels,
+                    datasets: [{
+                        data: catData,
+                        backgroundColor: [
+                            '#198754', '#f57c00', '#dc3545', '#0dcaf0', 
+                            '#6f42c1', '#fd7e14', '#20c997', '#ffc107', '#6c757d'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        }
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Food Item - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm border-0 p-4 p-md-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="metric-icon-box metric-icon-green me-3">
+                    <i class="bi bi-pencil-square fs-3 text-success"></i>
+                </div>
+                <div>
+                    <h3 class="fw-bold text-dark mb-0">Edit Food Item</h3>
+                    <p class="text-muted small mb-0">Update inventory details for <strong>{{ item.food_name }}</strong></p>
+                </div>
+            </div>
+
+            <form method="POST" action="{{ url_for('edit_food', item_id=item.id) }}">
+                <div class="row g-3">
+                    <!-- Food Name -->
+                    <div class="col-md-7">
+                        <label for="food_name" class="form-label fw-semibold">Food Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="food_name" name="food_name" value="{{ item.food_name }}" required>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="col-md-5">
+                        <label for="category" class="form-label fw-semibold">Food Category <span class="text-danger">*</span></label>
+                        <select class="form-select" id="category" name="category" required>
+                            {% for cat in categories %}
+                                <option value="{{ cat }}" {% if item.category == cat %}selected{% endif %}>{{ cat }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="col-md-4">
+                        <label for="quantity" class="form-label fw-semibold">Quantity <span class="text-danger">*</span></label>
+                        <input type="number" step="0.1" min="0.1" class="form-control" id="quantity" name="quantity" value="{{ item.quantity }}" required>
+                    </div>
+
+                    <!-- Unit -->
+                    <div class="col-md-4">
+                        <label for="unit" class="form-label fw-semibold">Measurement Unit</label>
+                        <select class="form-select" id="unit" name="unit">
+                            <option value="kg" {% if item.unit == 'kg' %}selected{% endif %}>kg (Kilograms)</option>
+                            <option value="g" {% if item.unit == 'g' %}selected{% endif %}>g (Grams)</option>
+                            <option value="liters" {% if item.unit == 'liters' %}selected{% endif %}>liters (Liters)</option>
+                            <option value="items" {% if item.unit == 'items' %}selected{% endif %}>items / units</option>
+                            <option value="packets" {% if item.unit == 'packets' %}selected{% endif %}>packets</option>
+                            <option value="servings" {% if item.unit == 'servings' %}selected{% endif %}>servings</option>
+                        </select>
+                    </div>
+
+                    <!-- Storage Type -->
+                    <div class="col-md-4">
+                        <label for="storage_type" class="form-label fw-semibold">Storage Location</label>
+                        <select class="form-select" id="storage_type" name="storage_type">
+                            <option value="Refrigerator" {% if item.storage_type == 'Refrigerator' %}selected{% endif %}>❄️ Refrigerator</option>
+                            <option value="Freezer" {% if item.storage_type == 'Freezer' %}selected{% endif %}>🧊 Freezer</option>
+                            <option value="Pantry / Room Temp" {% if item.storage_type == 'Pantry / Room Temp' %}selected{% endif %}>🍞 Pantry / Room Temp</option>
+                        </select>
+                    </div>
+
+                    <!-- Purchase Date -->
+                    <div class="col-md-6">
+                        <label for="purchase_date" class="form-label fw-semibold">Purchase Date</label>
+                        <input type="date" class="form-control" id="purchase_date" name="purchase_date" value="{{ item.purchase_date.strftime('%Y-%m-%d') }}">
+                    </div>
+
+                    <!-- Expiry Date -->
+                    <div class="col-md-6">
+                        <label for="expiry_date" class="form-label fw-semibold">Expiry Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="expiry_date" name="expiry_date" value="{{ item.expiry_date.strftime('%Y-%m-%d') }}" required>
+                    </div>
+
+                    <!-- Cost -->
+                    <div class="col-md-4">
+                        <label for="purchase_cost" class="form-label fw-semibold">Purchase Cost ($)</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" step="0.01" min="0" class="form-control" id="purchase_cost" name="purchase_cost" value="{{ item.purchase_cost }}">
+                        </div>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="col-md-4">
+                        <label for="status" class="form-label fw-semibold">Inventory Status</label>
+                        <select class="form-select" id="status" name="status">
+                            <option value="active" {% if item.status == 'active' %}selected{% endif %}>Active (In Stock)</option>
+                            <option value="consumed" {% if item.status == 'consumed' %}selected{% endif %}>Consumed (Saved)</option>
+                            <option value="wasted" {% if item.status == 'wasted' %}selected{% endif %}>Wasted (Spoiled)</option>
+                            <option value="donated" {% if item.status == 'donated' %}selected{% endif %}>Donated</option>
+                        </select>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="col-md-4">
+                        <label for="notes" class="form-label fw-semibold">Notes / Brand</label>
+                        <input type="text" class="form-control" id="notes" name="notes" value="{{ item.notes or '' }}">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+                    <a href="{{ url_for('inventory') }}" class="btn btn-outline-secondary px-4">Back</a>
+                    <button type="submit" class="btn btn-eco-primary px-4 shadow-sm">
+                        <i class="bi bi-save me-1"></i> Update Item
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

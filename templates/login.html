@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center py-4">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-md border-0 p-4 p-md-5">
+            <div class="text-center mb-4">
+                <div class="metric-icon-box metric-icon-green mx-auto mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-box-arrow-in-right fs-3 text-success"></i>
+                </div>
+                <h3 class="fw-bold text-dark">Welcome Back</h3>
+                <p class="text-muted small">Log in to view your food dashboard &amp; inventory</p>
+            </div>
+
+            <!-- Demo Account Quick Access Alert -->
+            <div class="alert alert-warning-subtle border border-warning-subtle p-3 rounded-3 mb-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <strong class="text-warning-emphasis"><i class="bi bi-info-circle me-1"></i> Demo Account:</strong>
+                        <div class="small text-muted">User: <code>demo</code> | Pass: <code>demo123</code></div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-warning text-dark fw-semibold" id="fillDemoBtn">
+                        Fill Demo
+                    </button>
+                </div>
+            </div>
+
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-semibold">Username or Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username or email" required>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="form-label fw-semibold">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-eco-primary w-100 py-2 fs-6 shadow-sm">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Log In
+                </button>
+            </form>
+
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="small text-muted mb-0">Don't have an account yet? 
+                    <a href="{{ url_for('register') }}" class="text-success fw-bold">Register free here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('fillDemoBtn')?.addEventListener('click', function() {
+    document.getElementById('username').value = 'demo';
+    document.getElementById('password').value = 'demo123';
+});
+</script>
+{% endblock %}

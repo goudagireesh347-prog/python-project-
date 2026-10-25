@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block title %}Food Inventory - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-box-seam text-success me-2"></i>Food Inventory Management
+        </h2>
+        <p class="text-muted mb-0">Track and monitor fresh foods, pantry staples, and freezer stocks</p>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('add_food') }}" class="btn btn-eco-primary shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i> Add New Item
+        </a>
+        <a href="{{ url_for('expiry_alerts') }}" class="btn btn-warning text-dark fw-bold shadow-sm">
+            <i class="bi bi-bell-fill me-1"></i> Expiry Alerts
+        </a>
+    </div>
+</div>
+
+<!-- Search & Filtering Card -->
+<div class="card border-0 shadow-sm p-3 mb-4">
+    <form method="GET" action="{{ url_for('inventory') }}" class="row g-2 align-items-center">
+        <!-- Search query -->
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" name="q" value="{{ search_query }}" placeholder="Search food by name...">
+            </div>
+        </div>
+
+        <!-- Category filter -->
+        <div class="col-md-3">
+            <select class="form-select" name="category" onchange="this.form.submit()">
+                <option value="">All Categories</option>
+                {% for cat in categories %}
+                    <option value="{{ cat }}" {% if category_filter == cat %}selected{% endif %}>{{ cat }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Expiry health filter -->
+        <div class="col-md-3">
+            <select class="form-select" name="expiry_state" onchange="this.form.submit()">
+                <option value="">All Freshness Levels</option>
+                <option value="fresh" {% if expiry_filter == 'fresh' %}selected{% endif %}>🟢 Fresh Only (> 3 days)</option>
+                <option value="expiring_soon" {% if expiry_filter == 'expiring_soon' %}selected{% endif %}>🟡 Expiring Soon (&le; 3 days)</option>
+                <option value="expired" {% if expiry_filter == 'expired' %}selected{% endif %}>🔴 Expired Only</option>
+            </select>
+        </div>
+
+        <!-- Submit & Reset Buttons -->
+        <div class="col-md-2 d-flex gap-1">
+            <button type="submit" class="btn btn-eco-primary flex-grow-1">Filter</button>
+            {% if search_query or category_filter or expiry_filter %}
+                <a href="{{ url_for('inventory') }}" class="btn btn-outline-secondary" title="Reset Filters"><i class="bi bi-x-lg"></i></a>
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+<!-- Inventory Items Table -->
+<div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold mb-0 text-dark">
+            <i class="bi bi-card-checklist text-success me-2"></i>Inventory Items 
+            <span class="badge bg-light text-dark border ms-1">{{ items|length }} found</span>
+        </h5>
+        <!-- Quick client search helper -->
+        <div style="max-width: 250px;">
+            <input type="text" id="tableSearchInput" class="form-control form-control-sm" placeholder="Quick filter in table...">
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-custom table-hover align-middle mb-0 filterable-table">
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Purchase Date</th>
+                    <th>Expiry Date</th>
+                    <th>Storage</th>
+                    <th>Cost</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if items %}
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <strong class="text-dark">{{ item.food_name }}</strong>
+                            {% if item.notes %}
+                            <div class="small text-muted text-truncate" style="max-width: 220px;" title="{{ item.notes }}">{{ item.notes }}</div>
+                            {% endif %}
+                        </td>
+                        <td><span class="badge bg-light text-dark border">{{ item.category }}</span></td>
+                        <td>
+                            <strong>{{ item.quantity }}</strong> <small class="text-muted">{{ item.unit }}</small>
+                        </td>
+                        <td><small class="text-muted">{{ item.purchase_date.strftime('%Y-%m-%d') }}</small></td>
+                        <td>
+                            <div><strong>{{ item.expiry_date.strftime('%Y-%m-%d') }}</strong></div>
+                            <small>
+                                {% if item.days_remaining < 0 %}
+                                    <span class="text-danger fw-bold">{{ item.days_remaining|abs }}d expired</span>
+                                {% elif item.days_remaining == 0 %}
+                                    <span class="text-warning fw-bold">Expires today!</span>
+                                {% elif item.days_remaining <= 3 %}
+                                    <span class="text-warning-emphasis fw-bold">{{ item.days_remaining }}d left</span>
+                                {% else %}
+                                    <span class="text-success">{{ item.days_remaining }}d left</span>
+                                {% endif %}
+                            </small>
+                        </td>
+                        <td>
+                            <span class="small text-muted"><i class="bi bi-thermometer-half text-primary me-1"></i>{{ item.storage_type }}</span>
+                        </td>
+                        <td>
+                            {% if item.purchase_cost > 0 %}
+                                <span class="small">${{ "%.2f"|format(item.purchase_cost) }}</span>
+                            {% else %}
+                                <span class="small text-muted">-</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.expiry_status == 'fresh' %}
+                                <span class="badge badge-fresh"><i class="bi bi-check-circle me-1"></i>Fresh</span>
+                            {% elif item.expiry_status == 'expiring_soon' %}
+                                <span class="badge badge-expiring"><i class="bi bi-hourglass-split me-1"></i>Expiring Soon</span>
+                            {% else %}
+                                <span class="badge badge-expired"><i class="bi bi-x-octagon me-1"></i>Expired</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            <div class="btn-group btn-group-sm">
+                                <!-- Mark Consumed -->
+                                {% if item.expiry_status != 'expired' %}
+                                <form method="POST" action="{{ url_for('mark_consumed', item_id=item.id) }}" class="d-inline">
+                                    <button type="submit" class="btn btn-outline-success btn-sm" title="Mark Consumed (Saved!)">
+                                        <i class="bi bi-check2-circle"></i> Eaten
+                                    </button>
+                                </form>
+                                {% endif %}
+
+                                <!-- Quick Donate (only for unexpired items) -->
+                                {% if item.expiry_status != 'expired' %}
+                                <button type="button" class="btn btn-outline-warning text-dark btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#quickDonateModal"
+                                        data-item-id="{{ item.id }}"
+                                        data-item-name="{{ item.food_name }}"
+                                        data-item-category="{{ item.category }}"
+                                        data-item-qty="{{ item.quantity }}"
+                                        data-item-unit="{{ item.unit }}"
+                                        title="List for Donation">
+                                    <i class="bi bi-heart"></i> Donate
+                                </button>
+                                {% endif %}
+
+                                <!-- Mark Wasted Modal Trigger -->
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#logWasteModal"
+                                        data-item-id="{{ item.id }}"
+                                        data-item-name="{{ item.food_name }}"
+                                        data-item-qty="{{ item.quantity }}"
+                                        data-item-unit="{{ item.unit }}"
+                                        data-action="{{ url_for('mark_wasted', item_id=item.id) }}"
+                                        title="Log as Waste">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+
+                                <!-- Edit -->
+                                <a href="{{ url_for('edit_food', item_id=item.id) }}" class="btn btn-outline-secondary btn-sm" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+
+                                <!-- Delete -->
+                                <form method="POST" action="{{ url_for('delete_food', item_id=item.id) }}" class="d-inline" onsubmit="return confirm('Are you sure you want to delete {{ item.food_name }}?');">
+                                    <button type="submit" class="btn btn-outline-secondary btn-sm text-danger" title="Delete">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="9" class="text-center py-5 text-muted">
+                            <i class="bi bi-search fs-2 d-block mb-2"></i>
+                            No food items matched your query.
+                            <div class="mt-2">
+                                <a href="{{ url_for('add_food') }}" class="btn btn-eco-primary btn-sm me-2">Add New Item</a>
+                                <a href="{{ url_for('inventory') }}" class="btn btn-outline-secondary btn-sm">Clear Filters</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal: Log Waste from Inventory -->
+<div class="modal fade" id="logWasteModal" tabindex="-1" aria-labelledby="logWasteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title fw-bold" id="logWasteModalLabel">
+                    <i class="bi bi-trash3 text-danger me-2"></i>Record Item as Food Waste
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="wasteModalForm" method="POST" action="">
+                <div class="modal-body">
+                    <p class="mb-3">Item: <strong id="modalWasteFoodName" class="text-dark"></strong></p>
+                    <div class="mb-3">
+                        <label for="wasteReason" class="form-label fw-semibold">Primary Waste Cause</label>
+                        <select class="form-select" id="wasteReason" name="reason" required>
+                            <option value="Past Expiry Date" selected>Past Expiry Date</option>
+                            <option value="Spoiled / Mold">Spoiled / Mold</option>
+                            <option value="Plate Waste / Leftovers">Plate Waste / Leftovers</option>
+                            <option value="Overcooked / Burnt">Overcooked / Burnt</option>
+                            <option value="Storage Failure">Storage Failure</option>
+                            <option value="Over-purchased">Over-purchased</option>
+                        </select>
+                    </div>
+                    <small class="text-muted">This moves the item out of active inventory and records it into your Waste Analytics tracking log.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Log Food Waste</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Quick Donate from Inventory -->
+<div class="modal fade" id="quickDonateModal" tabindex="-1" aria-labelledby="quickDonateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning-subtle">
+                <h5 class="modal-title fw-bold text-dark" id="quickDonateModalLabel">
+                    <i class="bi bi-heart-fill text-danger me-2"></i>List Surplus Food for Donation
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="{{ url_for('add_donation') }}">
+                <input type="hidden" id="modal_inventory_item_id" name="inventory_item_id" value="">
+                <input type="hidden" id="modal_category" name="category" value="">
+                <input type="hidden" id="modal_unit" name="unit" value="">
+                
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="modal_food_name" class="form-label fw-semibold">Food Item Name</label>
+                        <input type="text" class="form-control" id="modal_food_name" name="food_name" required readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modal_quantity" class="form-label fw-semibold">Quantity to Donate</label>
+                        <input type="number" step="0.1" class="form-control" id="modal_quantity" name="quantity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pickup_location" class="form-label fw-semibold">Pickup Location <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="pickup_location" name="pickup_location" placeholder="e.g. Canteen Hall Bay 1 or Front Desk" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="safe_deadline" class="form-label fw-semibold">Safe Pickup Deadline <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="safe_deadline" name="safe_deadline" placeholder="e.g. Tomorrow by 4:00 PM" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact_info" class="form-label fw-semibold">Contact Email / Phone <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="contact_info" name="contact_info" placeholder="e.g. (555) 019-2834 / food@campus.edu" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="storage_condition" class="form-label fw-semibold">Storage Condition</label>
+                        <select class="form-select" id="storage_condition" name="storage_condition">
+                            <option value="Properly Packed & Refrigerated" selected>Properly Packed &amp; Refrigerated</option>
+                            <option value="Shelf Stable / Ambient">Shelf Stable / Ambient</option>
+                            <option value="Kept Warm & Sealed">Kept Warm &amp; Sealed</option>
+                            <option value="Commercial Sealed Packaging">Commercial Sealed Packaging</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-eco-primary">Publish Donation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

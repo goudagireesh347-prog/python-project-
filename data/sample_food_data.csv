@@ -1,0 +1,1201 @@
+food_category,quantity_purchased,shelf_life_days,days_remaining,storage_type,household_diners,consumption_pace,historical_waste_rate,waste_quantity_kg,waste_percentage
+Prepared Meals,4.0,4,2,Refrigerator,1,Moderate,0.1,1.55,38.9
+Beverages,4.43,11,2,Refrigerator,3,Moderate,0.17,1.5,33.8
+Bakery,1.56,4,4,Freezer,2,Slow,0.4,0.2,12.6
+Dairy & Eggs,3.04,6,3,Refrigerator,5,Moderate,0.15,0.47,15.4
+Grains & Cereals,0.57,56,22,Pantry / Room Temp,3,Moderate,0.29,0.17,30.0
+Dairy & Eggs,2.21,11,7,Refrigerator,2,Slow,0.33,0.66,29.7
+Bakery,3.2,6,0,Refrigerator,1,Fast,0.31,1.08,33.8
+Beverages,2.91,6,3,Refrigerator,8,Fast,0.32,0.29,9.9
+Bakery,0.57,2,1,Pantry / Room Temp,2,Moderate,0.38,0.23,39.9
+Snacks,0.75,43,18,Pantry / Room Temp,2,Slow,0.17,0.29,39.0
+Snacks,4.25,6,1,Refrigerator,2,Fast,0.13,0.93,21.8
+Fruits & Vegetables,1.14,9,7,Refrigerator,10,Moderate,0.09,0.19,16.9
+Fruits & Vegetables,1.1,6,6,Refrigerator,3,Moderate,0.09,0.24,21.9
+Grains & Cereals,1.62,70,10,Refrigerator,3,Fast,0.2,0.2,12.3
+Meat & Poultry,2.78,4,1,Pantry / Room Temp,1,Moderate,0.07,2.64,95.0
+Snacks,2.1,91,81,Refrigerator,2,Moderate,0.26,0.39,18.4
+Meat & Poultry,0.69,4,0,Refrigerator,3,Moderate,0.08,0.19,27.2
+Seafood,0.93,4,3,Refrigerator,3,Moderate,0.09,0.1,10.7
+Bakery,5.4,7,4,Freezer,2,Slow,0.33,0.8,14.8
+Seafood,5.23,3,2,Pantry / Room Temp,1,Moderate,0.03,4.97,95.0
+Grains & Cereals,3.12,41,25,Pantry / Room Temp,1,Moderate,0.15,1.49,47.7
+Prepared Meals,1.26,4,4,Pantry / Room Temp,3,Moderate,0.17,0.37,29.3
+Bakery,1.41,3,2,Refrigerator,2,Moderate,0.17,0.35,25.1
+Grains & Cereals,1.29,18,15,Refrigerator,6,Moderate,0.25,0.05,4.1
+Beverages,3.35,14,4,Pantry / Room Temp,2,Moderate,0.2,1.69,50.5
+Fruits & Vegetables,1.78,6,1,Pantry / Room Temp,3,Moderate,0.1,0.82,46.1
+Bakery,3.62,5,2,Refrigerator,2,Moderate,0.46,1.2,33.2
+Seafood,5.29,3,2,Freezer,3,Fast,0.25,0.48,9.1
+Dairy & Eggs,2.37,10,9,Freezer,4,Moderate,0.2,0.01,0.6
+Bakery,2.62,7,3,Freezer,2,Moderate,0.09,0.37,14.1
+Beverages,3.42,10,1,Pantry / Room Temp,4,Fast,0.21,0.92,26.9
+Seafood,1.1,4,1,Refrigerator,3,Moderate,0.33,0.34,30.7
+Snacks,4.63,102,69,Refrigerator,2,Slow,0.12,1.89,40.8
+Seafood,3.95,2,1,Refrigerator,4,Moderate,0.16,0.99,25.1
+Grains & Cereals,0.69,50,41,Freezer,1,Slow,0.31,0.0,0.0
+Prepared Meals,9.89,3,0,Pantry / Room Temp,3,Moderate,0.35,7.32,74.0
+Meat & Poultry,0.78,4,3,Freezer,6,Moderate,0.11,0.05,6.0
+Seafood,0.6,3,0,Refrigerator,2,Moderate,0.06,0.18,29.4
+Seafood,1.21,2,0,Refrigerator,2,Moderate,0.02,0.47,38.5
+Dairy & Eggs,0.69,15,14,Freezer,1,Moderate,0.11,0.0,0.7
+Fruits & Vegetables,4.51,10,5,Refrigerator,2,Slow,0.19,2.5,55.4
+Seafood,3.61,3,1,Refrigerator,2,Moderate,0.12,1.27,35.1
+Grains & Cereals,3.76,51,27,Pantry / Room Temp,3,Moderate,0.11,1.26,33.4
+Dairy & Eggs,4.1,14,13,Freezer,8,Moderate,0.17,0.0,0.0
+Prepared Meals,2.13,6,4,Pantry / Room Temp,2,Fast,0.22,0.35,16.3
+Snacks,1.86,118,69,Refrigerator,3,Slow,0.06,0.38,20.3
+Bakery,0.59,5,1,Refrigerator,1,Slow,0.23,0.34,56.9
+Snacks,0.71,91,44,Freezer,3,Slow,0.2,0.07,9.2
+Beverages,3.3,10,0,Refrigerator,1,Moderate,0.2,1.32,39.9
+Snacks,3.44,37,6,Freezer,4,Slow,0.04,0.5,14.6
+Dairy & Eggs,0.7,5,3,Freezer,3,Moderate,0.17,0.0,0.0
+Grains & Cereals,2.55,79,18,Refrigerator,1,Slow,0.16,0.86,33.6
+Meat & Poultry,13.48,4,4,Freezer,5,Slow,0.16,1.28,9.5
+Bakery,4.51,8,1,Pantry / Room Temp,3,Slow,0.13,3.57,79.1
+Meat & Poultry,1.35,2,1,Refrigerator,2,Moderate,0.05,0.31,22.8
+Grains & Cereals,1.67,38,13,Pantry / Room Temp,4,Fast,0.26,0.36,21.6
+Grains & Cereals,0.61,56,44,Pantry / Room Temp,4,Moderate,0.11,0.08,12.5
+Snacks,3.03,109,49,Freezer,4,Moderate,0.01,0.23,7.6
+Seafood,5.71,1,1,Refrigerator,5,Moderate,0.1,1.32,23.2
+Meat & Poultry,13.86,4,3,Freezer,4,Slow,0.33,1.63,11.8
+Meat & Poultry,1.84,2,1,Refrigerator,3,Moderate,0.4,0.66,35.9
+Seafood,4.36,3,3,Refrigerator,2,Moderate,0.41,1.15,26.3
+Beverages,5.02,11,11,Freezer,3,Fast,0.08,0.52,10.4
+Beverages,4.54,11,10,Refrigerator,2,Slow,0.25,1.46,32.1
+Snacks,3.5,47,9,Pantry / Room Temp,3,Slow,0.33,2.19,62.5
+Bakery,1.13,4,2,Refrigerator,1,Moderate,0.08,0.36,31.5
+Snacks,0.85,90,37,Refrigerator,10,Moderate,0.1,0.13,15.7
+Fruits & Vegetables,0.58,7,3,Freezer,1,Moderate,0.63,0.01,2.1
+Fruits & Vegetables,1.4,7,0,Pantry / Room Temp,2,Fast,0.35,0.52,37.1
+Snacks,1.05,122,28,Freezer,1,Slow,0.11,0.07,6.8
+Beverages,4.12,12,12,Pantry / Room Temp,1,Moderate,0.13,1.81,44.1
+Dairy & Eggs,5.41,13,11,Refrigerator,2,Moderate,0.04,0.9,16.7
+Bakery,7.02,7,6,Refrigerator,4,Moderate,0.18,1.95,27.7
+Snacks,1.16,36,5,Pantry / Room Temp,8,Moderate,0.16,0.41,35.0
+Grains & Cereals,0.65,39,16,Refrigerator,3,Slow,0.16,0.18,28.4
+Seafood,0.92,1,1,Refrigerator,2,Moderate,0.13,0.07,7.6
+Meat & Poultry,3.29,2,0,Freezer,2,Moderate,0.18,0.41,12.6
+Fruits & Vegetables,2.01,3,2,Refrigerator,4,Slow,0.22,0.48,23.7
+Bakery,0.68,4,0,Pantry / Room Temp,1,Slow,0.35,0.56,82.6
+Beverages,3.62,23,15,Pantry / Room Temp,3,Moderate,0.27,1.19,33.0
+Fruits & Vegetables,0.94,5,3,Pantry / Room Temp,1,Moderate,0.25,0.43,45.9
+Prepared Meals,1.84,3,2,Freezer,3,Moderate,0.04,0.0,0.0
+Prepared Meals,1.33,2,1,Pantry / Room Temp,2,Moderate,0.16,0.54,40.5
+Bakery,0.66,6,0,Refrigerator,1,Slow,0.56,0.38,57.6
+Meat & Poultry,3.44,3,0,Refrigerator,2,Moderate,0.11,1.37,39.8
+Fruits & Vegetables,1.59,7,0,Pantry / Room Temp,4,Moderate,0.21,0.85,53.7
+Beverages,6.79,14,9,Freezer,3,Slow,0.15,0.4,5.8
+Prepared Meals,5.24,3,3,Pantry / Room Temp,1,Moderate,0.21,3.03,57.8
+Snacks,2.48,67,39,Refrigerator,4,Moderate,0.18,0.19,7.6
+Beverages,3.12,7,0,Refrigerator,6,Slow,0.29,1.55,49.7
+Fruits & Vegetables,5.14,7,6,Freezer,4,Fast,0.24,0.54,10.5
+Prepared Meals,5.19,4,4,Refrigerator,4,Slow,0.1,1.82,35.1
+Prepared Meals,0.97,4,0,Refrigerator,3,Slow,0.15,0.53,54.6
+Seafood,0.74,2,2,Freezer,1,Moderate,0.13,0.01,1.5
+Dairy & Eggs,10.66,10,7,Refrigerator,3,Moderate,0.12,3.49,32.7
+Prepared Meals,1.8,5,1,Pantry / Room Temp,2,Moderate,0.27,0.98,54.5
+Grains & Cereals,0.81,48,42,Pantry / Room Temp,1,Moderate,0.04,0.09,10.8
+Fruits & Vegetables,2.82,8,3,Pantry / Room Temp,2,Fast,0.22,0.99,34.9
+Bakery,4.01,6,2,Pantry / Room Temp,6,Slow,0.28,2.52,62.7
+Grains & Cereals,2.42,50,13,Pantry / Room Temp,2,Moderate,0.3,1.11,45.8
+Grains & Cereals,5.74,68,49,Freezer,1,Slow,0.14,1.06,18.5
+Dairy & Eggs,1.37,7,4,Refrigerator,2,Slow,0.2,0.52,38.2
+Dairy & Eggs,0.59,12,8,Pantry / Room Temp,1,Fast,0.29,0.3,50.9
+Prepared Meals,2.88,4,2,Freezer,4,Moderate,0.43,0.55,19.1
+Bakery,8.69,4,1,Refrigerator,4,Moderate,0.55,3.5,40.3
+Bakery,1.05,5,2,Refrigerator,4,Slow,0.15,0.44,42.0
+Beverages,2.22,17,9,Freezer,1,Moderate,0.25,0.01,0.6
+Dairy & Eggs,2.7,4,3,Refrigerator,3,Fast,0.15,0.37,13.7
+Grains & Cereals,5.0,84,37,Refrigerator,2,Moderate,0.2,1.17,23.4
+Beverages,2.51,19,7,Refrigerator,2,Fast,0.03,0.39,15.6
+Beverages,2.61,8,6,Refrigerator,1,Slow,0.21,0.98,37.5
+Grains & Cereals,1.01,87,9,Refrigerator,1,Moderate,0.23,0.27,26.9
+Meat & Poultry,9.99,4,4,Refrigerator,6,Moderate,0.12,1.52,15.2
+Meat & Poultry,3.18,4,1,Freezer,6,Slow,0.06,0.42,13.2
+Dairy & Eggs,1.12,11,9,Pantry / Room Temp,4,Slow,0.24,0.69,61.7
+Dairy & Eggs,15.0,13,0,Pantry / Room Temp,2,Fast,0.15,14.25,95.0
+Grains & Cereals,1.77,40,36,Pantry / Room Temp,2,Fast,0.07,0.29,16.5
+Seafood,1.55,4,2,Freezer,3,Moderate,0.2,0.1,6.1
+Seafood,4.88,4,2,Refrigerator,1,Moderate,0.1,2.63,53.9
+Grains & Cereals,3.52,71,51,Refrigerator,4,Moderate,0.17,0.29,8.4
+Meat & Poultry,1.15,3,1,Refrigerator,4,Moderate,0.44,0.29,24.8
+Prepared Meals,3.01,3,0,Refrigerator,3,Slow,0.22,1.85,61.3
+Prepared Meals,2.74,7,6,Freezer,1,Moderate,0.21,0.41,14.8
+Meat & Poultry,1.21,3,2,Refrigerator,3,Moderate,0.29,0.21,17.7
+Prepared Meals,2.19,3,0,Refrigerator,3,Moderate,0.07,0.64,29.3
+Grains & Cereals,1.8,81,49,Refrigerator,5,Moderate,0.09,0.41,22.7
+Fruits & Vegetables,1.07,5,3,Refrigerator,4,Slow,0.14,0.37,34.6
+Bakery,0.96,4,1,Pantry / Room Temp,2,Moderate,0.08,0.48,49.5
+Snacks,4.29,89,34,Refrigerator,8,Slow,0.28,1.41,32.9
+Meat & Poultry,2.65,4,0,Pantry / Room Temp,4,Moderate,0.2,2.52,95.0
+Seafood,1.44,3,3,Refrigerator,6,Fast,0.04,0.22,15.5
+Meat & Poultry,1.01,3,3,Pantry / Room Temp,4,Moderate,0.34,0.41,40.9
+Dairy & Eggs,1.06,10,10,Freezer,2,Moderate,0.28,0.09,8.6
+Grains & Cereals,0.85,47,1,Refrigerator,6,Moderate,0.28,0.21,24.6
+Dairy & Eggs,1.22,10,4,Refrigerator,3,Slow,0.1,0.42,34.1
+Snacks,1.74,67,12,Freezer,3,Moderate,0.34,0.05,2.8
+Meat & Poultry,2.15,2,2,Refrigerator,1,Moderate,0.13,0.56,26.0
+Prepared Meals,1.68,3,1,Pantry / Room Temp,1,Moderate,0.18,0.94,56.2
+Seafood,4.59,2,0,Refrigerator,3,Moderate,0.12,1.35,29.4
+Fruits & Vegetables,7.34,5,4,Refrigerator,2,Fast,0.31,2.14,29.2
+Dairy & Eggs,1.57,4,4,Refrigerator,4,Slow,0.18,0.31,19.7
+Prepared Meals,3.27,2,0,Refrigerator,4,Moderate,0.26,1.42,43.5
+Grains & Cereals,0.69,79,62,Refrigerator,8,Moderate,0.24,0.04,6.4
+Snacks,2.16,69,68,Freezer,3,Moderate,0.36,0.1,4.5
+Beverages,2.51,12,7,Refrigerator,1,Moderate,0.1,0.96,38.2
+Seafood,1.24,3,3,Pantry / Room Temp,2,Moderate,0.18,0.66,52.8
+Grains & Cereals,3.58,66,48,Refrigerator,3,Slow,0.07,0.89,24.9
+Bakery,1.28,6,3,Freezer,4,Moderate,0.1,0.13,10.1
+Fruits & Vegetables,1.22,4,0,Pantry / Room Temp,3,Moderate,0.23,0.71,58.0
+Meat & Poultry,0.51,1,1,Refrigerator,3,Slow,0.15,0.1,20.3
+Seafood,0.79,2,1,Freezer,4,Slow,0.29,0.05,6.0
+Fruits & Vegetables,2.45,4,2,Freezer,1,Moderate,0.28,0.14,5.7
+Bakery,2.02,6,0,Refrigerator,2,Moderate,0.25,0.79,39.3
+Prepared Meals,1.09,2,1,Refrigerator,4,Moderate,0.06,0.19,17.4
+Grains & Cereals,10.89,59,44,Freezer,6,Slow,0.22,1.62,14.8
+Grains & Cereals,2.11,95,28,Pantry / Room Temp,2,Moderate,0.28,0.82,39.1
+Fruits & Vegetables,3.83,11,0,Refrigerator,2,Slow,0.28,2.52,65.8
+Grains & Cereals,1.73,45,38,Refrigerator,1,Fast,0.22,0.29,16.8
+Grains & Cereals,5.56,44,0,Freezer,6,Moderate,0.05,0.6,10.9
+Seafood,2.33,1,0,Pantry / Room Temp,3,Moderate,0.14,2.21,95.0
+Dairy & Eggs,1.64,10,5,Pantry / Room Temp,3,Moderate,0.28,1.19,72.3
+Dairy & Eggs,4.86,12,5,Freezer,2,Moderate,0.19,0.0,0.0
+Seafood,0.9,2,0,Pantry / Room Temp,3,Slow,0.12,0.85,95.0
+Beverages,1.23,10,4,Pantry / Room Temp,2,Moderate,0.1,0.48,39.1
+Seafood,2.71,2,2,Refrigerator,5,Moderate,0.3,0.44,16.2
+Beverages,5.44,12,8,Refrigerator,2,Moderate,0.12,1.21,22.3
+Grains & Cereals,9.08,68,45,Refrigerator,3,Slow,0.19,3.62,39.9
+Grains & Cereals,3.23,55,17,Refrigerator,4,Moderate,0.34,0.92,28.6
+Beverages,0.7,9,7,Refrigerator,5,Moderate,0.33,0.13,18.7
+Bakery,0.57,6,5,Refrigerator,2,Slow,0.07,0.16,28.4
+Grains & Cereals,1.48,52,3,Pantry / Room Temp,2,Moderate,0.14,0.64,43.0
+Grains & Cereals,2.94,75,42,Refrigerator,2,Moderate,0.14,0.6,20.4
+Snacks,1.7,60,1,Pantry / Room Temp,1,Moderate,0.25,1.04,61.4
+Snacks,1.23,119,104,Refrigerator,3,Moderate,0.17,0.16,13.0
+Bakery,1.06,2,2,Freezer,1,Fast,0.11,0.06,5.8
+Fruits & Vegetables,1.24,12,5,Refrigerator,4,Moderate,0.05,0.33,26.4
+Snacks,2.93,143,119,Pantry / Room Temp,3,Moderate,0.04,0.61,20.7
+Grains & Cereals,2.56,64,41,Freezer,3,Slow,0.08,0.18,7.1
+Dairy & Eggs,1.91,10,10,Refrigerator,2,Fast,0.26,0.1,5.1
+Bakery,0.98,1,1,Refrigerator,2,Moderate,0.18,0.08,8.4
+Snacks,1.61,93,8,Freezer,1,Moderate,0.31,0.07,4.4
+Bakery,1.66,2,2,Freezer,3,Moderate,0.12,0.2,12.1
+Dairy & Eggs,2.91,13,11,Freezer,1,Moderate,0.28,0.14,4.7
+Snacks,2.79,137,122,Freezer,3,Slow,0.31,0.19,6.9
+Bakery,1.81,6,0,Refrigerator,5,Fast,0.25,0.54,30.1
+Meat & Poultry,2.96,3,1,Refrigerator,4,Moderate,0.21,0.59,20.0
+Snacks,0.56,68,27,Refrigerator,3,Slow,0.13,0.14,24.7
+Dairy & Eggs,2.73,2,1,Refrigerator,2,Moderate,0.2,0.81,29.5
+Meat & Poultry,0.9,4,4,Refrigerator,8,Moderate,0.06,0.05,5.4
+Seafood,7.37,2,0,Pantry / Room Temp,3,Fast,0.15,6.03,81.8
+Fruits & Vegetables,2.17,7,1,Refrigerator,4,Moderate,0.19,0.62,28.7
+Prepared Meals,2.23,5,0,Freezer,10,Slow,0.1,0.13,5.8
+Beverages,2.63,8,1,Refrigerator,1,Moderate,0.19,1.27,48.4
+Seafood,3.51,2,2,Refrigerator,1,Fast,0.25,0.74,21.2
+Grains & Cereals,2.45,29,6,Pantry / Room Temp,2,Moderate,0.07,0.99,40.4
+Dairy & Eggs,1.79,15,12,Refrigerator,10,Slow,0.53,0.6,33.8
+Grains & Cereals,1.15,75,57,Pantry / Room Temp,1,Fast,0.06,0.23,20.4
+Snacks,1.22,120,35,Refrigerator,3,Fast,0.21,0.14,11.2
+Snacks,3.7,101,9,Refrigerator,1,Moderate,0.33,1.54,41.7
+Dairy & Eggs,0.51,7,6,Refrigerator,2,Slow,0.3,0.14,27.1
+Bakery,4.08,4,4,Refrigerator,2,Slow,0.26,1.53,37.4
+Snacks,3.64,108,94,Refrigerator,4,Moderate,0.23,0.78,21.4
+Seafood,4.08,4,0,Pantry / Room Temp,2,Moderate,0.49,3.88,95.0
+Fruits & Vegetables,1.34,7,0,Refrigerator,3,Slow,0.23,0.75,56.0
+Fruits & Vegetables,0.81,9,5,Pantry / Room Temp,6,Moderate,0.19,0.3,36.8
+Prepared Meals,2.0,6,4,Refrigerator,1,Moderate,0.06,0.61,30.3
+Seafood,1.92,2,1,Pantry / Room Temp,2,Slow,0.09,1.82,95.0
+Meat & Poultry,4.68,4,2,Pantry / Room Temp,2,Moderate,0.09,4.34,92.6
+Dairy & Eggs,3.44,8,5,Refrigerator,1,Moderate,0.41,1.64,47.7
+Seafood,5.82,3,3,Refrigerator,3,Moderate,0.22,1.12,19.2
+Grains & Cereals,3.66,24,5,Refrigerator,4,Moderate,0.23,0.75,20.4
+Prepared Meals,0.54,5,3,Refrigerator,2,Slow,0.1,0.16,30.5
+Snacks,2.24,101,29,Refrigerator,1,Fast,0.31,0.55,24.3
+Prepared Meals,2.95,4,1,Refrigerator,3,Moderate,0.22,1.12,38.1
+Prepared Meals,0.83,5,3,Refrigerator,4,Moderate,0.34,0.24,29.4
+Meat & Poultry,1.41,4,0,Freezer,3,Fast,0.57,0.03,2.4
+Seafood,7.71,3,3,Refrigerator,1,Moderate,0.2,4.53,58.7
+Fruits & Vegetables,0.82,7,3,Freezer,1,Moderate,0.17,0.05,6.3
+Seafood,1.76,2,1,Pantry / Room Temp,1,Moderate,0.17,1.66,94.1
+Beverages,3.76,8,4,Pantry / Room Temp,6,Moderate,0.07,1.16,30.9
+Seafood,1.05,3,2,Refrigerator,2,Slow,0.17,0.33,31.6
+Beverages,10.65,13,7,Refrigerator,3,Slow,0.26,4.87,45.7
+Fruits & Vegetables,3.91,7,2,Freezer,2,Slow,0.04,0.27,6.8
+Snacks,1.07,55,24,Freezer,3,Moderate,0.28,0.06,5.4
+Prepared Meals,6.94,3,3,Refrigerator,2,Slow,0.34,2.86,41.2
+Snacks,1.5,111,51,Refrigerator,4,Slow,0.17,0.45,29.8
+Dairy & Eggs,5.09,3,1,Refrigerator,1,Moderate,0.18,1.99,39.1
+Beverages,1.06,8,2,Refrigerator,3,Fast,0.05,0.21,19.4
+Prepared Meals,2.57,2,0,Refrigerator,10,Moderate,0.08,1.1,42.6
+Prepared Meals,2.23,2,2,Freezer,6,Slow,0.38,0.22,10.0
+Seafood,2.31,3,0,Pantry / Room Temp,2,Slow,0.33,2.19,95.0
+Snacks,0.98,49,48,Pantry / Room Temp,3,Moderate,0.07,0.11,11.7
+Meat & Poultry,3.89,3,0,Pantry / Room Temp,1,Moderate,0.51,3.7,95.0
+Bakery,3.19,9,4,Refrigerator,2,Slow,0.25,1.27,39.8
+Grains & Cereals,2.96,81,65,Refrigerator,3,Moderate,0.23,0.63,21.1
+Fruits & Vegetables,1.74,3,3,Freezer,2,Moderate,0.18,0.03,1.9
+Fruits & Vegetables,2.76,3,2,Freezer,1,Moderate,0.12,0.27,9.6
+Fruits & Vegetables,0.74,6,3,Pantry / Room Temp,3,Slow,0.05,0.36,48.4
+Bakery,1.19,9,2,Freezer,6,Moderate,0.16,0.18,14.9
+Seafood,0.53,4,4,Refrigerator,3,Moderate,0.03,0.06,11.5
+Grains & Cereals,2.66,65,24,Refrigerator,3,Moderate,0.15,0.7,26.3
+Grains & Cereals,8.8,90,9,Refrigerator,2,Slow,0.2,6.3,71.6
+Bakery,2.46,4,3,Freezer,2,Moderate,0.19,0.06,2.6
+Dairy & Eggs,0.64,6,3,Freezer,3,Moderate,0.2,0.0,0.0
+Grains & Cereals,3.49,64,47,Refrigerator,1,Moderate,0.16,1.13,32.3
+Snacks,0.58,81,64,Refrigerator,4,Moderate,0.12,0.04,6.8
+Grains & Cereals,3.88,89,53,Refrigerator,3,Moderate,0.13,0.9,23.3
+Seafood,0.88,2,0,Refrigerator,3,Fast,0.19,0.15,17.6
+Beverages,2.27,9,2,Freezer,1,Fast,0.11,0.0,0.0
+Prepared Meals,1.08,6,2,Pantry / Room Temp,1,Fast,0.4,0.34,31.9
+Snacks,0.53,24,7,Refrigerator,2,Moderate,0.34,0.12,23.3
+Dairy & Eggs,1.27,13,7,Refrigerator,2,Moderate,0.2,0.26,20.6
+Grains & Cereals,1.19,49,16,Freezer,3,Fast,0.41,0.13,11.2
+Dairy & Eggs,1.37,8,4,Freezer,1,Fast,0.1,0.06,4.4
+Seafood,3.68,3,2,Pantry / Room Temp,6,Moderate,0.28,2.55,69.2
+Snacks,3.39,101,71,Pantry / Room Temp,2,Fast,0.15,0.84,24.7
+Snacks,5.21,91,42,Refrigerator,2,Fast,0.17,1.2,23.1
+Meat & Poultry,4.64,1,1,Pantry / Room Temp,2,Moderate,0.11,2.91,62.6
+Meat & Poultry,0.6,6,2,Pantry / Room Temp,2,Fast,0.1,0.24,40.4
+Seafood,2.12,4,1,Freezer,4,Slow,0.33,0.1,4.8
+Fruits & Vegetables,1.16,3,2,Refrigerator,4,Fast,0.36,0.13,11.6
+Beverages,1.33,21,5,Refrigerator,2,Fast,0.05,0.3,22.2
+Dairy & Eggs,7.5,8,3,Refrigerator,3,Moderate,0.08,2.08,27.7
+Meat & Poultry,4.32,3,0,Pantry / Room Temp,4,Moderate,0.22,4.1,95.0
+Seafood,5.33,2,2,Freezer,4,Moderate,0.06,0.74,13.9
+Dairy & Eggs,4.6,7,1,Freezer,1,Slow,0.23,0.56,12.1
+Meat & Poultry,5.39,3,3,Refrigerator,1,Slow,0.06,2.28,42.3
+Bakery,2.41,2,2,Pantry / Room Temp,2,Moderate,0.07,0.68,28.4
+Seafood,2.71,3,1,Refrigerator,2,Fast,0.27,0.55,20.4
+Grains & Cereals,1.53,82,78,Refrigerator,3,Moderate,0.22,0.23,15.3
+Beverages,3.19,22,10,Freezer,4,Slow,0.31,0.26,8.1
+Beverages,7.25,16,14,Freezer,4,Moderate,0.22,0.2,2.8
+Fruits & Vegetables,2.55,7,7,Pantry / Room Temp,3,Slow,0.32,1.06,41.7
+Prepared Meals,2.62,5,5,Pantry / Room Temp,1,Moderate,0.04,1.07,40.9
+Dairy & Eggs,0.66,3,0,Refrigerator,2,Moderate,0.04,0.18,27.9
+Prepared Meals,1.5,2,1,Refrigerator,8,Slow,0.19,0.47,31.6
+Prepared Meals,3.2,3,2,Refrigerator,2,Moderate,0.11,0.87,27.1
+Snacks,3.26,122,34,Refrigerator,1,Moderate,0.2,1.44,44.1
+Beverages,1.52,15,3,Refrigerator,3,Moderate,0.34,0.31,20.5
+Meat & Poultry,1.68,2,1,Pantry / Room Temp,4,Fast,0.39,0.88,52.1
+Beverages,1.52,13,9,Refrigerator,3,Slow,0.11,0.35,23.0
+Beverages,2.3,13,5,Pantry / Room Temp,2,Fast,0.12,0.85,36.8
+Grains & Cereals,3.56,107,67,Freezer,1,Moderate,0.14,0.08,2.2
+Prepared Meals,1.26,2,0,Refrigerator,5,Moderate,0.4,0.61,48.6
+Prepared Meals,6.52,2,1,Freezer,2,Moderate,0.05,0.46,7.0
+Meat & Poultry,1.22,4,4,Pantry / Room Temp,10,Moderate,0.08,0.41,33.6
+Beverages,1.23,14,2,Refrigerator,4,Moderate,0.11,0.37,29.7
+Prepared Meals,6.27,6,2,Refrigerator,3,Moderate,0.18,2.02,32.2
+Beverages,6.45,9,2,Freezer,3,Moderate,0.19,0.85,13.2
+Prepared Meals,1.76,5,4,Refrigerator,1,Moderate,0.17,0.35,19.7
+Snacks,1.1,83,59,Refrigerator,2,Moderate,0.17,0.11,9.9
+Fruits & Vegetables,0.52,6,1,Freezer,2,Moderate,0.12,0.03,4.9
+Seafood,1.74,2,2,Refrigerator,3,Moderate,0.31,0.21,12.1
+Snacks,1.59,82,29,Refrigerator,2,Slow,0.08,0.39,24.4
+Snacks,6.79,142,11,Refrigerator,4,Slow,0.19,3.11,45.8
+Dairy & Eggs,3.45,9,0,Freezer,3,Slow,0.3,0.11,3.3
+Prepared Meals,0.77,2,0,Refrigerator,2,Fast,0.07,0.17,21.7
+Bakery,1.45,5,2,Pantry / Room Temp,2,Slow,0.22,0.86,59.1
+Grains & Cereals,3.66,32,25,Refrigerator,2,Slow,0.11,0.86,23.6
+Grains & Cereals,0.89,68,45,Pantry / Room Temp,3,Moderate,0.2,0.19,21.4
+Fruits & Vegetables,2.8,8,2,Freezer,6,Slow,0.21,0.51,18.1
+Grains & Cereals,2.98,52,34,Refrigerator,2,Slow,0.24,0.61,20.4
+Beverages,8.12,15,4,Refrigerator,4,Slow,0.02,3.32,40.9
+Dairy & Eggs,2.99,7,3,Freezer,4,Slow,0.14,0.37,12.3
+Dairy & Eggs,1.13,9,5,Refrigerator,5,Slow,0.15,0.28,24.4
+Fruits & Vegetables,3.37,9,3,Freezer,4,Fast,0.39,0.19,5.6
+Prepared Meals,1.85,3,1,Refrigerator,1,Slow,0.12,0.87,46.8
+Beverages,1.69,15,12,Pantry / Room Temp,1,Moderate,0.21,0.55,32.8
+Snacks,1.7,78,3,Refrigerator,3,Moderate,0.21,0.47,27.6
+Meat & Poultry,8.51,3,2,Refrigerator,3,Moderate,0.12,3.2,37.6
+Fruits & Vegetables,1.05,6,2,Refrigerator,1,Slow,0.04,0.48,45.9
+Seafood,3.36,3,1,Freezer,3,Slow,0.15,0.2,6.0
+Dairy & Eggs,1.66,14,10,Refrigerator,1,Moderate,0.07,0.33,19.9
+Bakery,2.8,3,3,Pantry / Room Temp,1,Moderate,0.14,1.23,43.9
+Meat & Poultry,8.83,1,1,Freezer,3,Fast,0.27,0.0,0.0
+Fruits & Vegetables,2.03,5,3,Refrigerator,2,Moderate,0.13,0.39,19.2
+Seafood,3.69,2,0,Pantry / Room Temp,1,Slow,0.1,3.51,95.0
+Grains & Cereals,1.73,79,22,Pantry / Room Temp,2,Moderate,0.36,0.78,45.1
+Snacks,13.21,100,18,Freezer,2,Slow,0.21,3.35,25.4
+Bakery,2.25,4,0,Refrigerator,3,Fast,0.25,0.61,27.1
+Dairy & Eggs,5.98,7,3,Refrigerator,3,Moderate,0.4,2.56,42.8
+Dairy & Eggs,2.41,14,3,Pantry / Room Temp,1,Fast,0.11,1.92,79.5
+Prepared Meals,2.29,4,1,Refrigerator,1,Fast,0.17,0.71,31.1
+Fruits & Vegetables,0.53,8,2,Freezer,1,Slow,0.33,0.05,8.5
+Prepared Meals,0.69,1,1,Pantry / Room Temp,2,Slow,0.03,0.24,34.4
+Beverages,1.33,13,1,Freezer,1,Moderate,0.24,0.23,16.9
+Snacks,1.24,89,39,Freezer,4,Slow,0.23,0.08,6.9
+Prepared Meals,1.09,2,1,Pantry / Room Temp,1,Moderate,0.06,0.54,49.4
+Beverages,0.67,16,15,Pantry / Room Temp,3,Moderate,0.24,0.09,13.1
+Meat & Poultry,2.98,5,2,Pantry / Room Temp,2,Moderate,0.27,2.8,94.1
+Meat & Poultry,0.9,3,0,Refrigerator,1,Slow,0.22,0.41,46.1
+Grains & Cereals,1.84,106,44,Freezer,1,Slow,0.15,0.12,6.4
+Seafood,2.98,3,0,Freezer,3,Slow,0.19,0.24,8.1
+Meat & Poultry,0.68,2,1,Pantry / Room Temp,2,Moderate,0.17,0.48,70.3
+Meat & Poultry,0.99,6,2,Pantry / Room Temp,5,Moderate,0.1,0.8,81.1
+Beverages,1.64,6,3,Freezer,5,Moderate,0.36,0.04,2.2
+Seafood,1.78,3,2,Refrigerator,1,Moderate,0.12,0.53,29.5
+Fruits & Vegetables,2.04,9,0,Refrigerator,5,Moderate,0.15,0.71,34.6
+Bakery,2.66,2,1,Refrigerator,1,Moderate,0.13,0.99,37.2
+Bakery,0.95,3,0,Refrigerator,1,Moderate,0.44,0.36,37.7
+Beverages,2.38,18,10,Pantry / Room Temp,1,Slow,0.19,1.22,51.1
+Fruits & Vegetables,1.38,4,2,Pantry / Room Temp,8,Moderate,0.55,0.63,45.7
+Grains & Cereals,3.04,80,6,Refrigerator,3,Moderate,0.06,0.81,26.7
+Fruits & Vegetables,0.55,7,7,Refrigerator,2,Slow,0.34,0.15,26.4
+Dairy & Eggs,1.39,8,5,Freezer,4,Moderate,0.21,0.06,4.3
+Grains & Cereals,0.94,47,35,Refrigerator,3,Fast,0.38,0.11,11.6
+Grains & Cereals,1.63,63,8,Freezer,2,Slow,0.21,0.05,3.1
+Prepared Meals,2.46,3,0,Freezer,1,Moderate,0.25,0.07,3.0
+Grains & Cereals,1.38,48,9,Refrigerator,1,Moderate,0.46,0.49,35.7
+Snacks,2.01,121,2,Freezer,6,Slow,0.08,0.09,4.4
+Beverages,2.12,13,0,Pantry / Room Temp,3,Fast,0.2,0.8,37.6
+Bakery,1.15,3,0,Pantry / Room Temp,2,Moderate,0.16,0.65,56.8
+Prepared Meals,3.32,5,3,Refrigerator,2,Moderate,0.33,1.21,36.3
+Fruits & Vegetables,0.54,12,8,Freezer,5,Fast,0.04,0.01,1.1
+Snacks,0.83,32,30,Refrigerator,3,Moderate,0.05,0.06,7.8
+Bakery,5.28,4,1,Refrigerator,1,Fast,0.11,2.14,40.6
+Bakery,1.73,7,1,Refrigerator,2,Slow,0.29,0.96,55.3
+Prepared Meals,3.69,4,3,Refrigerator,4,Fast,0.1,1.0,27.2
+Prepared Meals,4.78,3,2,Pantry / Room Temp,3,Moderate,0.22,2.58,54.1
+Dairy & Eggs,0.64,7,5,Refrigerator,6,Fast,0.14,0.09,14.6
+Beverages,2.99,16,2,Refrigerator,3,Moderate,0.2,0.88,29.4
+Seafood,2.72,4,1,Refrigerator,4,Fast,0.13,0.45,16.4
+Dairy & Eggs,1.65,8,7,Refrigerator,6,Moderate,0.04,0.31,19.1
+Meat & Poultry,2.23,2,2,Refrigerator,2,Moderate,0.39,0.45,20.3
+Grains & Cereals,1.91,82,43,Refrigerator,2,Fast,0.14,0.33,17.1
+Prepared Meals,3.57,1,1,Pantry / Room Temp,2,Fast,0.3,0.79,22.1
+Meat & Poultry,2.08,5,4,Freezer,4,Moderate,0.17,0.2,9.7
+Fruits & Vegetables,3.29,6,5,Refrigerator,2,Moderate,0.12,0.8,24.2
+Prepared Meals,3.59,4,4,Pantry / Room Temp,1,Moderate,0.03,1.54,42.8
+Beverages,0.66,14,2,Refrigerator,1,Slow,0.06,0.24,36.8
+Bakery,1.38,4,1,Refrigerator,1,Moderate,0.19,0.54,38.9
+Bakery,3.65,7,1,Refrigerator,2,Slow,0.16,2.27,62.3
+Prepared Meals,9.2,4,4,Pantry / Room Temp,4,Moderate,0.58,4.53,49.3
+Grains & Cereals,2.84,96,11,Refrigerator,4,Slow,0.06,1.14,40.3
+Snacks,3.19,130,66,Freezer,2,Moderate,0.12,0.39,12.1
+Snacks,5.99,98,80,Refrigerator,2,Moderate,0.37,1.43,23.9
+Meat & Poultry,2.27,3,3,Freezer,3,Fast,0.03,0.07,2.9
+Dairy & Eggs,1.91,11,4,Refrigerator,2,Slow,0.01,0.79,41.4
+Seafood,1.58,2,2,Refrigerator,2,Slow,0.14,0.49,31.3
+Beverages,0.69,15,4,Freezer,2,Fast,0.25,0.02,3.0
+Snacks,1.33,42,37,Refrigerator,2,Moderate,0.13,0.16,11.7
+Fruits & Vegetables,5.79,10,8,Refrigerator,2,Fast,0.15,1.4,24.2
+Grains & Cereals,1.61,57,39,Refrigerator,3,Moderate,0.1,0.16,9.8
+Prepared Meals,1.96,3,0,Refrigerator,2,Moderate,0.08,0.82,41.9
+Seafood,1.01,4,2,Refrigerator,3,Moderate,0.39,0.32,31.8
+Grains & Cereals,2.01,67,22,Refrigerator,3,Moderate,0.22,0.36,17.7
+Bakery,0.9,5,3,Refrigerator,2,Slow,0.32,0.33,37.1
+Bakery,1.3,6,1,Refrigerator,3,Fast,0.06,0.31,23.9
+Prepared Meals,2.52,3,2,Pantry / Room Temp,3,Fast,0.12,0.63,25.0
+Snacks,2.53,189,63,Refrigerator,1,Fast,0.08,0.39,15.5
+Grains & Cereals,3.55,52,3,Pantry / Room Temp,2,Moderate,0.2,1.82,51.2
+Prepared Meals,0.59,4,0,Refrigerator,3,Moderate,0.14,0.16,26.4
+Dairy & Eggs,0.67,7,4,Pantry / Room Temp,1,Moderate,0.12,0.45,66.4
+Dairy & Eggs,0.73,15,13,Refrigerator,3,Moderate,0.06,0.12,16.4
+Fruits & Vegetables,7.96,10,3,Freezer,2,Moderate,0.36,0.49,6.1
+Seafood,0.76,3,0,Refrigerator,2,Slow,0.06,0.33,44.0
+Dairy & Eggs,1.54,7,5,Pantry / Room Temp,3,Slow,0.23,1.4,91.1
+Seafood,0.97,1,0,Pantry / Room Temp,2,Moderate,0.23,0.92,95.0
+Grains & Cereals,1.91,71,2,Refrigerator,2,Slow,0.15,0.94,49.1
+Seafood,1.34,1,0,Refrigerator,2,Slow,0.21,0.59,44.1
+Grains & Cereals,1.21,85,65,Pantry / Room Temp,2,Moderate,0.08,0.17,14.3
+Grains & Cereals,9.46,88,86,Refrigerator,4,Moderate,0.34,1.39,14.7
+Meat & Poultry,1.98,3,1,Pantry / Room Temp,2,Moderate,0.16,1.77,89.2
+Beverages,2.43,22,9,Freezer,2,Moderate,0.23,0.31,12.7
+Beverages,1.32,19,9,Refrigerator,3,Moderate,0.19,0.3,22.6
+Bakery,3.13,3,2,Refrigerator,4,Slow,0.21,1.1,35.1
+Seafood,1.63,4,3,Freezer,1,Moderate,0.13,0.06,3.8
+Snacks,0.93,86,61,Pantry / Room Temp,1,Slow,0.37,0.3,32.2
+Snacks,0.61,111,51,Refrigerator,3,Slow,0.11,0.14,23.2
+Grains & Cereals,5.77,58,55,Refrigerator,5,Slow,0.39,1.29,22.4
+Grains & Cereals,7.19,71,42,Pantry / Room Temp,2,Moderate,0.33,3.52,49.0
+Dairy & Eggs,1.29,12,11,Refrigerator,4,Fast,0.03,0.11,8.8
+Meat & Poultry,3.54,4,4,Refrigerator,4,Slow,0.17,0.72,20.4
+Snacks,2.93,95,76,Refrigerator,3,Slow,0.03,0.4,13.7
+Prepared Meals,2.07,4,2,Pantry / Room Temp,1,Moderate,0.11,1.09,52.8
+Dairy & Eggs,0.81,11,8,Refrigerator,3,Moderate,0.03,0.16,19.6
+Dairy & Eggs,2.14,6,5,Refrigerator,1,Moderate,0.3,0.38,17.8
+Dairy & Eggs,0.52,10,8,Refrigerator,3,Moderate,0.39,0.04,7.7
+Dairy & Eggs,2.49,7,6,Refrigerator,4,Moderate,0.19,0.26,10.5
+Meat & Poultry,0.71,2,2,Freezer,1,Moderate,0.42,0.0,0.0
+Grains & Cereals,1.48,49,4,Freezer,1,Moderate,0.03,0.01,0.7
+Meat & Poultry,1.06,4,2,Refrigerator,4,Fast,0.11,0.28,26.7
+Snacks,3.57,37,18,Refrigerator,3,Fast,0.22,0.91,25.6
+Prepared Meals,1.27,3,1,Freezer,2,Moderate,0.15,0.0,0.0
+Grains & Cereals,2.68,48,24,Pantry / Room Temp,2,Fast,0.17,0.72,26.9
+Dairy & Eggs,1.05,10,5,Refrigerator,3,Moderate,0.13,0.24,22.7
+Prepared Meals,0.82,3,3,Freezer,4,Moderate,0.07,0.07,8.1
+Bakery,1.76,7,4,Freezer,10,Slow,0.28,0.05,2.8
+Meat & Poultry,4.3,5,0,Freezer,8,Fast,0.35,0.16,3.7
+Seafood,4.8,4,4,Refrigerator,2,Fast,0.12,0.91,18.9
+Grains & Cereals,1.31,56,38,Refrigerator,1,Slow,0.09,0.31,23.4
+Grains & Cereals,4.52,52,29,Refrigerator,1,Fast,0.25,1.39,30.8
+Snacks,0.71,105,19,Refrigerator,1,Slow,0.36,0.24,34.4
+Fruits & Vegetables,2.21,6,1,Pantry / Room Temp,3,Moderate,0.32,1.29,58.5
+Dairy & Eggs,2.98,5,0,Pantry / Room Temp,3,Moderate,0.19,2.83,95.0
+Seafood,2.01,2,0,Refrigerator,1,Fast,0.17,0.64,32.0
+Fruits & Vegetables,0.53,5,4,Refrigerator,4,Moderate,0.11,0.13,23.6
+Seafood,1.64,1,1,Refrigerator,5,Moderate,0.05,0.16,9.9
+Prepared Meals,1.06,6,1,Refrigerator,2,Slow,0.19,0.39,36.8
+Bakery,3.99,2,0,Refrigerator,5,Fast,0.21,1.45,36.3
+Prepared Meals,0.54,4,0,Refrigerator,2,Slow,0.0,0.24,44.0
+Bakery,4.02,5,5,Refrigerator,3,Moderate,0.11,0.7,17.3
+Fruits & Vegetables,7.22,8,4,Pantry / Room Temp,2,Slow,0.09,5.49,76.1
+Meat & Poultry,2.67,4,1,Freezer,2,Moderate,0.11,0.13,4.8
+Grains & Cereals,0.68,96,22,Refrigerator,4,Moderate,0.11,0.14,20.5
+Bakery,0.73,6,2,Refrigerator,2,Fast,0.17,0.13,18.1
+Prepared Meals,0.62,5,4,Refrigerator,2,Moderate,0.27,0.13,20.7
+Dairy & Eggs,2.73,9,5,Pantry / Room Temp,2,Fast,0.1,1.6,58.6
+Fruits & Vegetables,3.26,7,1,Freezer,1,Moderate,0.3,0.27,8.4
+Beverages,5.2,18,6,Refrigerator,3,Fast,0.26,0.38,7.3
+Prepared Meals,3.52,2,1,Refrigerator,1,Moderate,0.16,1.48,42.1
+Seafood,2.67,1,1,Pantry / Room Temp,4,Moderate,0.07,1.26,47.2
+Grains & Cereals,1.87,56,27,Pantry / Room Temp,3,Fast,0.07,0.27,14.2
+Snacks,0.9,61,25,Pantry / Room Temp,3,Moderate,0.09,0.26,28.6
+Bakery,1.74,2,0,Pantry / Room Temp,6,Moderate,0.24,0.97,55.5
+Seafood,1.13,2,2,Refrigerator,3,Moderate,0.14,0.1,8.6
+Prepared Meals,14.15,2,2,Refrigerator,8,Moderate,0.28,3.46,24.5
+Prepared Meals,3.75,4,2,Pantry / Room Temp,5,Slow,0.1,2.02,53.9
+Bakery,2.34,4,1,Pantry / Room Temp,2,Moderate,0.16,1.25,53.3
+Seafood,7.24,2,2,Freezer,4,Moderate,0.25,0.46,6.3
+Seafood,5.03,4,3,Refrigerator,6,Moderate,0.24,0.37,7.3
+Grains & Cereals,4.93,62,32,Freezer,4,Moderate,0.16,0.25,5.2
+Dairy & Eggs,3.13,9,0,Refrigerator,2,Moderate,0.09,1.18,37.8
+Dairy & Eggs,1.83,3,3,Freezer,1,Slow,0.02,0.24,13.1
+Beverages,1.9,15,7,Pantry / Room Temp,4,Moderate,0.32,0.63,33.4
+Meat & Poultry,2.29,6,6,Pantry / Room Temp,1,Moderate,0.23,1.59,69.2
+Bakery,1.8,6,6,Refrigerator,2,Slow,0.4,0.55,30.3
+Grains & Cereals,1.24,52,38,Pantry / Room Temp,5,Moderate,0.36,0.24,19.6
+Fruits & Vegetables,2.11,10,2,Refrigerator,1,Moderate,0.06,0.83,39.3
+Bakery,10.45,6,1,Freezer,1,Slow,0.21,2.6,24.8
+Seafood,0.99,2,2,Refrigerator,2,Moderate,0.28,0.07,7.1
+Dairy & Eggs,0.75,18,16,Pantry / Room Temp,1,Moderate,0.19,0.4,53.6
+Prepared Meals,1.0,3,3,Refrigerator,3,Fast,0.58,0.13,12.7
+Seafood,0.84,3,0,Pantry / Room Temp,3,Moderate,0.14,0.8,95.0
+Prepared Meals,2.06,2,1,Refrigerator,1,Moderate,0.2,0.69,33.7
+Grains & Cereals,3.86,63,9,Refrigerator,4,Slow,0.28,1.84,47.8
+Grains & Cereals,1.17,18,14,Freezer,4,Moderate,0.15,0.0,0.0
+Snacks,3.84,53,43,Refrigerator,1,Slow,0.19,1.45,37.9
+Meat & Poultry,0.88,3,1,Refrigerator,2,Moderate,0.14,0.18,20.7
+Snacks,3.3,80,6,Refrigerator,1,Moderate,0.19,1.51,45.8
+Fruits & Vegetables,5.22,8,4,Refrigerator,1,Moderate,0.11,2.9,55.5
+Fruits & Vegetables,4.47,10,10,Pantry / Room Temp,3,Moderate,0.14,1.37,30.6
+Beverages,0.84,11,1,Refrigerator,1,Moderate,0.05,0.24,28.9
+Beverages,0.55,13,8,Refrigerator,3,Moderate,0.29,0.07,13.3
+Fruits & Vegetables,6.46,9,7,Freezer,3,Slow,0.11,0.54,8.3
+Snacks,1.1,107,105,Refrigerator,2,Moderate,0.4,0.14,12.6
+Grains & Cereals,4.33,45,19,Refrigerator,2,Fast,0.32,0.86,20.0
+Beverages,7.32,11,11,Refrigerator,2,Fast,0.15,1.46,20.0
+Beverages,2.04,19,16,Freezer,2,Fast,0.16,0.02,1.1
+Grains & Cereals,2.06,26,26,Refrigerator,4,Moderate,0.28,0.41,19.8
+Beverages,1.78,5,5,Freezer,4,Slow,0.11,0.14,7.8
+Fruits & Vegetables,0.8,6,2,Pantry / Room Temp,4,Moderate,0.09,0.36,44.7
+Snacks,0.88,34,33,Pantry / Room Temp,2,Moderate,0.2,0.12,13.3
+Seafood,1.55,4,4,Pantry / Room Temp,3,Moderate,0.38,0.72,46.6
+Dairy & Eggs,0.61,8,0,Refrigerator,2,Moderate,0.21,0.27,44.5
+Fruits & Vegetables,3.7,6,4,Pantry / Room Temp,3,Fast,0.21,0.75,20.4
+Bakery,2.69,5,2,Refrigerator,8,Slow,0.3,1.06,39.4
+Prepared Meals,1.66,3,0,Pantry / Room Temp,1,Moderate,0.09,1.08,64.8
+Snacks,1.22,111,39,Pantry / Room Temp,2,Fast,0.17,0.35,28.6
+Meat & Poultry,1.02,4,3,Refrigerator,1,Fast,0.34,0.15,14.6
+Grains & Cereals,2.02,55,3,Freezer,3,Fast,0.02,0.19,9.4
+Grains & Cereals,0.84,85,38,Refrigerator,3,Moderate,0.06,0.1,11.7
+Prepared Meals,2.98,3,0,Pantry / Room Temp,1,Moderate,0.4,2.38,79.8
+Beverages,1.19,8,3,Freezer,4,Fast,0.13,0.0,0.1
+Snacks,1.83,88,26,Refrigerator,4,Moderate,0.13,0.48,26.0
+Snacks,6.86,166,35,Refrigerator,2,Moderate,0.09,2.63,38.3
+Dairy & Eggs,3.37,8,1,Refrigerator,3,Moderate,0.21,1.16,34.4
+Grains & Cereals,3.1,68,38,Freezer,2,Slow,0.12,0.24,7.7
+Snacks,1.65,116,79,Refrigerator,3,Moderate,0.23,0.13,7.8
+Dairy & Eggs,1.35,8,1,Refrigerator,2,Moderate,0.11,0.31,23.1
+Meat & Poultry,4.0,2,0,Refrigerator,5,Moderate,0.08,1.78,44.5
+Beverages,5.07,20,0,Refrigerator,4,Moderate,0.2,2.06,40.6
+Bakery,0.67,2,2,Refrigerator,3,Fast,0.35,0.06,9.0
+Beverages,3.51,18,7,Refrigerator,2,Fast,0.15,0.62,17.8
+Grains & Cereals,1.04,53,7,Refrigerator,1,Moderate,0.26,0.33,31.3
+Fruits & Vegetables,2.38,8,7,Refrigerator,3,Fast,0.16,0.36,15.0
+Snacks,0.93,60,54,Refrigerator,1,Moderate,0.18,0.1,10.3
+Bakery,1.65,6,2,Freezer,2,Slow,0.15,0.11,6.4
+Grains & Cereals,0.65,49,48,Refrigerator,3,Moderate,0.04,0.08,11.6
+Grains & Cereals,3.44,68,31,Pantry / Room Temp,1,Moderate,0.65,2.1,61.0
+Dairy & Eggs,1.66,11,3,Refrigerator,1,Moderate,0.05,0.66,39.9
+Fruits & Vegetables,3.46,2,0,Pantry / Room Temp,1,Slow,0.14,3.29,95.0
+Grains & Cereals,6.54,86,69,Pantry / Room Temp,4,Moderate,0.22,1.5,23.0
+Fruits & Vegetables,1.64,9,9,Refrigerator,2,Moderate,0.2,0.2,12.2
+Grains & Cereals,0.66,62,1,Refrigerator,3,Moderate,0.24,0.19,28.8
+Bakery,4.21,3,2,Refrigerator,2,Slow,0.07,1.63,38.8
+Dairy & Eggs,4.76,5,1,Pantry / Room Temp,2,Moderate,0.17,4.52,95.0
+Grains & Cereals,0.75,58,38,Refrigerator,2,Fast,0.42,0.08,11.0
+Dairy & Eggs,1.71,7,0,Freezer,2,Slow,0.1,0.23,13.4
+Seafood,0.66,1,1,Freezer,3,Slow,0.39,0.04,6.5
+Meat & Poultry,2.25,2,0,Freezer,4,Moderate,0.43,0.19,8.6
+Dairy & Eggs,2.02,13,12,Freezer,1,Moderate,0.13,0.06,2.9
+Dairy & Eggs,1.11,13,8,Refrigerator,2,Moderate,0.1,0.2,18.2
+Prepared Meals,0.76,4,3,Pantry / Room Temp,2,Slow,0.14,0.29,38.4
+Grains & Cereals,2.19,49,21,Refrigerator,1,Slow,0.35,0.82,37.2
+Meat & Poultry,2.41,4,1,Freezer,1,Slow,0.25,0.45,18.8
+Bakery,4.48,5,1,Refrigerator,1,Moderate,0.12,2.46,55.0
+Dairy & Eggs,7.56,11,5,Refrigerator,8,Moderate,0.46,2.76,36.6
+Snacks,1.83,76,45,Refrigerator,1,Fast,0.2,0.33,18.1
+Fruits & Vegetables,1.97,7,7,Refrigerator,2,Slow,0.28,0.52,26.5
+Beverages,1.82,8,2,Pantry / Room Temp,3,Slow,0.05,0.9,49.3
+Meat & Poultry,1.75,7,0,Freezer,3,Moderate,0.19,0.18,10.2
+Seafood,4.47,1,0,Refrigerator,2,Fast,0.23,1.38,30.9
+Seafood,2.1,3,2,Pantry / Room Temp,1,Moderate,0.16,1.59,75.6
+Fruits & Vegetables,1.93,8,8,Freezer,3,Moderate,0.09,0.19,9.7
+Meat & Poultry,0.6,6,6,Refrigerator,1,Moderate,0.43,0.08,13.4
+Bakery,2.11,1,1,Freezer,2,Moderate,0.14,0.11,5.2
+Grains & Cereals,3.61,70,58,Refrigerator,4,Moderate,0.14,0.52,14.3
+Meat & Poultry,2.03,3,3,Pantry / Room Temp,2,Fast,0.05,0.35,17.5
+Bakery,0.76,6,5,Pantry / Room Temp,2,Slow,0.22,0.27,35.5
+Prepared Meals,2.11,3,1,Refrigerator,4,Moderate,0.1,0.44,20.6
+Meat & Poultry,0.74,4,4,Refrigerator,3,Fast,0.14,0.1,13.8
+Beverages,1.71,13,0,Refrigerator,2,Moderate,0.14,0.63,36.8
+Beverages,3.83,14,10,Pantry / Room Temp,1,Moderate,0.17,1.67,43.6
+Dairy & Eggs,6.33,5,1,Pantry / Room Temp,8,Fast,0.31,4.0,63.2
+Grains & Cereals,4.11,53,19,Refrigerator,6,Moderate,0.01,0.78,19.0
+Fruits & Vegetables,11.29,5,0,Pantry / Room Temp,3,Fast,0.35,6.4,56.7
+Grains & Cereals,0.75,33,33,Refrigerator,2,Moderate,0.19,0.02,2.9
+Fruits & Vegetables,2.94,6,4,Refrigerator,2,Slow,0.2,1.24,42.2
+Beverages,10.49,14,6,Pantry / Room Temp,2,Moderate,0.16,7.2,68.6
+Snacks,0.96,130,45,Refrigerator,1,Slow,0.13,0.32,33.8
+Fruits & Vegetables,0.53,7,1,Freezer,3,Slow,0.18,0.1,18.3
+Beverages,1.53,27,5,Pantry / Room Temp,3,Moderate,0.21,0.64,42.0
+Bakery,1.49,6,4,Refrigerator,4,Fast,0.12,0.28,18.6
+Fruits & Vegetables,1.44,6,1,Freezer,3,Moderate,0.28,0.19,13.5
+Prepared Meals,1.89,7,4,Refrigerator,2,Slow,0.35,0.67,35.5
+Bakery,1.96,1,0,Refrigerator,3,Slow,0.34,0.9,46.1
+Meat & Poultry,2.15,4,1,Refrigerator,2,Fast,0.19,0.46,21.3
+Meat & Poultry,0.8,3,0,Freezer,2,Moderate,0.16,0.01,1.6
+Seafood,5.41,5,2,Refrigerator,2,Fast,0.12,1.64,30.3
+Fruits & Vegetables,1.56,8,5,Refrigerator,4,Slow,0.56,0.61,39.3
+Beverages,0.53,13,4,Refrigerator,2,Moderate,0.38,0.18,34.9
+Bakery,5.23,3,1,Refrigerator,3,Moderate,0.25,2.14,40.9
+Seafood,0.79,3,3,Refrigerator,2,Moderate,0.05,0.13,15.9
+Fruits & Vegetables,3.9,6,3,Freezer,3,Moderate,0.08,0.7,18.0
+Prepared Meals,1.2,5,0,Refrigerator,2,Slow,0.12,0.62,51.9
+Fruits & Vegetables,0.64,7,1,Refrigerator,4,Moderate,0.17,0.21,32.7
+Meat & Poultry,4.76,1,1,Refrigerator,2,Moderate,0.2,1.09,22.8
+Prepared Meals,1.6,5,1,Freezer,1,Fast,0.18,0.18,11.2
+Meat & Poultry,2.41,4,3,Freezer,2,Slow,0.12,0.21,8.8
+Dairy & Eggs,4.33,6,6,Refrigerator,4,Fast,0.49,0.88,20.4
+Seafood,1.3,3,1,Pantry / Room Temp,4,Fast,0.11,0.7,53.6
+Seafood,0.93,2,0,Refrigerator,2,Moderate,0.21,0.33,35.6
+Snacks,3.38,131,49,Refrigerator,2,Slow,0.07,1.04,30.7
+Seafood,2.92,2,1,Refrigerator,1,Moderate,0.25,1.07,36.8
+Fruits & Vegetables,2.09,5,3,Refrigerator,1,Slow,0.06,0.95,45.7
+Snacks,2.76,93,73,Refrigerator,2,Moderate,0.11,0.47,17.0
+Beverages,2.15,26,20,Pantry / Room Temp,1,Slow,0.14,1.04,48.2
+Prepared Meals,1.2,4,3,Freezer,3,Slow,0.1,0.09,7.4
+Meat & Poultry,1.18,3,0,Freezer,3,Moderate,0.21,0.08,7.0
+Snacks,0.57,49,22,Refrigerator,6,Slow,0.1,0.12,20.7
+Bakery,0.93,5,5,Refrigerator,2,Moderate,0.1,0.18,19.0
+Snacks,4.16,97,89,Refrigerator,3,Slow,0.09,0.52,12.6
+Dairy & Eggs,2.51,11,3,Freezer,1,Moderate,0.18,0.18,7.2
+Grains & Cereals,7.66,85,1,Refrigerator,3,Fast,0.44,2.25,29.4
+Bakery,0.74,5,4,Refrigerator,2,Moderate,0.32,0.14,19.3
+Dairy & Eggs,2.7,13,4,Refrigerator,2,Fast,0.08,0.78,28.9
+Fruits & Vegetables,1.73,10,0,Pantry / Room Temp,1,Slow,0.24,1.55,89.6
+Bakery,1.1,8,4,Refrigerator,2,Moderate,0.07,0.3,27.2
+Dairy & Eggs,1.56,15,7,Pantry / Room Temp,6,Moderate,0.18,1.09,70.0
+Fruits & Vegetables,1.01,1,0,Freezer,1,Moderate,0.08,0.07,7.2
+Meat & Poultry,0.78,2,2,Refrigerator,1,Moderate,0.22,0.14,18.0
+Beverages,2.67,11,4,Refrigerator,4,Slow,0.07,0.96,35.8
+Dairy & Eggs,1.76,8,3,Freezer,1,Moderate,0.03,0.13,7.3
+Dairy & Eggs,1.34,6,3,Pantry / Room Temp,2,Moderate,0.15,1.13,84.3
+Meat & Poultry,1.65,5,4,Refrigerator,1,Moderate,0.09,0.45,27.6
+Fruits & Vegetables,3.0,10,4,Refrigerator,3,Slow,0.34,1.17,39.0
+Dairy & Eggs,4.88,7,6,Pantry / Room Temp,3,Moderate,0.24,3.17,65.0
+Grains & Cereals,5.33,61,40,Refrigerator,1,Fast,0.17,1.71,32.1
+Beverages,3.88,17,10,Refrigerator,8,Fast,0.08,0.47,12.0
+Bakery,1.16,4,2,Refrigerator,2,Fast,0.28,0.31,26.8
+Bakery,1.28,3,2,Pantry / Room Temp,3,Moderate,0.33,0.52,41.0
+Dairy & Eggs,0.74,13,1,Pantry / Room Temp,3,Moderate,0.26,0.69,93.7
+Snacks,2.96,79,41,Refrigerator,2,Fast,0.39,0.58,19.4
+Meat & Poultry,2.46,6,1,Refrigerator,4,Fast,0.24,0.69,28.2
+Snacks,3.98,81,70,Refrigerator,8,Fast,0.17,0.23,5.7
+Bakery,1.9,4,0,Freezer,5,Moderate,0.5,0.14,7.3
+Grains & Cereals,2.27,31,30,Refrigerator,6,Slow,0.31,0.07,3.2
+Dairy & Eggs,0.81,8,2,Refrigerator,3,Moderate,0.14,0.21,25.5
+Snacks,3.03,102,75,Refrigerator,4,Fast,0.18,0.28,9.3
+Bakery,0.69,4,2,Pantry / Room Temp,8,Moderate,0.05,0.28,41.0
+Meat & Poultry,3.48,3,1,Pantry / Room Temp,3,Moderate,0.46,3.31,95.0
+Snacks,3.97,66,17,Pantry / Room Temp,1,Moderate,0.2,2.9,72.9
+Grains & Cereals,0.64,69,37,Refrigerator,1,Moderate,0.14,0.11,16.9
+Beverages,3.84,7,5,Refrigerator,4,Slow,0.08,0.89,23.1
+Seafood,1.94,4,4,Refrigerator,1,Fast,0.24,0.36,18.6
+Prepared Meals,2.74,2,2,Refrigerator,1,Slow,0.13,0.97,35.4
+Grains & Cereals,1.61,36,13,Refrigerator,3,Moderate,0.09,0.31,19.5
+Seafood,3.74,3,1,Pantry / Room Temp,4,Fast,0.15,2.31,61.8
+Bakery,1.33,6,6,Refrigerator,1,Fast,0.19,0.24,18.2
+Grains & Cereals,1.71,17,1,Refrigerator,2,Fast,0.15,0.21,12.5
+Grains & Cereals,3.04,89,3,Refrigerator,4,Fast,0.09,0.44,14.6
+Beverages,0.94,12,2,Refrigerator,2,Fast,0.07,0.08,8.6
+Seafood,2.58,1,0,Refrigerator,3,Moderate,0.63,1.18,45.6
+Fruits & Vegetables,0.93,9,7,Refrigerator,5,Moderate,0.44,0.13,13.5
+Beverages,0.96,16,10,Freezer,1,Fast,0.18,0.0,0.0
+Fruits & Vegetables,0.99,5,2,Refrigerator,2,Moderate,0.14,0.35,35.8
+Prepared Meals,0.68,4,3,Refrigerator,3,Moderate,0.03,0.08,11.8
+Dairy & Eggs,1.62,7,2,Freezer,3,Slow,0.1,0.18,11.0
+Seafood,4.4,1,0,Refrigerator,3,Slow,0.22,2.53,57.6
+Grains & Cereals,2.66,80,78,Pantry / Room Temp,2,Slow,0.28,0.96,36.0
+Dairy & Eggs,1.58,8,5,Refrigerator,3,Slow,0.13,0.52,32.7
+Snacks,1.9,31,8,Pantry / Room Temp,2,Moderate,0.34,0.85,44.6
+Grains & Cereals,0.51,61,23,Refrigerator,8,Moderate,0.04,0.12,24.1
+Bakery,1.55,8,8,Refrigerator,4,Moderate,0.33,0.29,18.7
+Meat & Poultry,0.55,2,0,Refrigerator,3,Moderate,0.35,0.24,44.2
+Fruits & Vegetables,3.89,5,4,Refrigerator,6,Slow,0.19,1.07,27.6
+Prepared Meals,3.05,4,3,Pantry / Room Temp,1,Moderate,0.31,1.8,58.9
+Seafood,0.87,2,0,Refrigerator,2,Slow,0.01,0.4,46.0
+Fruits & Vegetables,8.9,7,1,Refrigerator,2,Moderate,0.16,4.87,54.7
+Seafood,5.24,4,0,Refrigerator,2,Moderate,0.22,2.38,45.4
+Prepared Meals,0.88,5,0,Refrigerator,4,Moderate,0.01,0.31,35.1
+Meat & Poultry,7.37,5,4,Refrigerator,4,Moderate,0.29,2.1,28.5
+Fruits & Vegetables,1.67,11,0,Freezer,4,Fast,0.08,0.15,9.1
+Prepared Meals,0.68,1,0,Pantry / Room Temp,2,Slow,0.22,0.46,67.5
+Snacks,0.64,118,105,Refrigerator,2,Moderate,0.1,0.1,15.3
+Bakery,0.84,6,4,Refrigerator,5,Slow,0.25,0.26,31.0
+Beverages,1.82,22,5,Freezer,4,Moderate,0.07,0.11,5.9
+Dairy & Eggs,4.04,5,2,Refrigerator,2,Fast,0.08,0.9,22.2
+Beverages,1.72,9,5,Refrigerator,2,Slow,0.11,0.42,24.5
+Dairy & Eggs,1.52,15,3,Refrigerator,4,Moderate,0.01,0.39,25.9
+Bakery,3.2,4,4,Pantry / Room Temp,1,Moderate,0.11,1.37,42.9
+Fruits & Vegetables,2.18,5,3,Refrigerator,3,Moderate,0.28,0.52,23.8
+Beverages,3.94,8,3,Freezer,4,Moderate,0.06,0.38,9.7
+Bakery,5.34,5,5,Refrigerator,3,Fast,0.03,1.04,19.5
+Bakery,1.64,4,1,Refrigerator,2,Slow,0.07,0.72,44.2
+Snacks,0.78,96,41,Refrigerator,1,Moderate,0.34,0.17,21.9
+Snacks,0.73,140,85,Refrigerator,2,Slow,0.15,0.17,23.9
+Grains & Cereals,0.66,61,1,Refrigerator,3,Fast,0.12,0.08,12.1
+Seafood,1.08,4,3,Refrigerator,1,Fast,0.43,0.28,26.0
+Seafood,0.77,2,1,Pantry / Room Temp,3,Moderate,0.08,0.48,62.0
+Bakery,1.99,4,1,Refrigerator,3,Moderate,0.11,0.75,37.8
+Prepared Meals,4.61,6,2,Freezer,3,Moderate,0.48,0.66,14.3
+Grains & Cereals,4.56,32,19,Refrigerator,3,Slow,0.19,1.46,32.1
+Snacks,2.37,110,94,Refrigerator,4,Slow,0.2,0.29,12.1
+Snacks,6.06,89,39,Pantry / Room Temp,2,Moderate,0.22,3.05,50.3
+Seafood,1.69,3,2,Freezer,2,Fast,0.29,0.0,0.0
+Fruits & Vegetables,6.45,3,3,Pantry / Room Temp,3,Moderate,0.04,2.32,36.0
+Prepared Meals,2.51,3,2,Refrigerator,6,Moderate,0.1,0.61,24.2
+Beverages,0.76,3,0,Refrigerator,1,Slow,0.14,0.31,40.6
+Snacks,0.59,100,62,Pantry / Room Temp,1,Moderate,0.06,0.08,13.6
+Dairy & Eggs,0.75,8,1,Refrigerator,4,Slow,0.05,0.29,38.4
+Prepared Meals,1.3,3,3,Pantry / Room Temp,5,Slow,0.03,0.24,18.2
+Meat & Poultry,0.56,5,3,Refrigerator,2,Moderate,0.33,0.15,25.9
+Snacks,3.43,108,62,Refrigerator,1,Moderate,0.15,1.25,36.5
+Prepared Meals,1.53,2,0,Pantry / Room Temp,4,Moderate,0.03,0.79,51.8
+Bakery,1.14,8,1,Refrigerator,2,Moderate,0.06,0.49,43.0
+Snacks,4.71,96,54,Refrigerator,2,Slow,0.25,1.84,39.0
+Grains & Cereals,0.74,65,53,Refrigerator,3,Moderate,0.13,0.11,15.0
+Grains & Cereals,1.51,17,2,Refrigerator,2,Slow,0.14,0.68,45.1
+Fruits & Vegetables,0.85,8,2,Pantry / Room Temp,2,Moderate,0.19,0.45,52.9
+Prepared Meals,0.76,4,4,Pantry / Room Temp,2,Moderate,0.18,0.22,28.7
+Beverages,1.87,18,4,Refrigerator,1,Slow,0.19,0.98,52.2
+Prepared Meals,0.6,2,2,Freezer,3,Moderate,0.09,0.03,5.1
+Bakery,2.58,5,2,Refrigerator,2,Moderate,0.31,0.89,34.3
+Beverages,2.13,16,2,Refrigerator,1,Moderate,0.37,0.77,36.2
+Fruits & Vegetables,2.65,8,5,Refrigerator,3,Moderate,0.19,0.77,28.9
+Beverages,6.66,21,5,Refrigerator,3,Moderate,0.37,2.3,34.5
+Beverages,1.64,19,3,Pantry / Room Temp,3,Moderate,0.05,0.8,49.0
+Dairy & Eggs,0.82,17,8,Refrigerator,1,Fast,0.3,0.21,25.0
+Beverages,1.04,17,8,Refrigerator,3,Moderate,0.17,0.24,23.2
+Meat & Poultry,0.99,5,1,Pantry / Room Temp,3,Slow,0.05,0.94,95.0
+Bakery,1.07,6,2,Pantry / Room Temp,4,Moderate,0.31,0.5,46.9
+Bakery,2.05,7,3,Pantry / Room Temp,1,Fast,0.01,0.66,32.1
+Grains & Cereals,5.77,73,69,Refrigerator,2,Slow,0.41,2.11,36.5
+Beverages,4.31,25,11,Refrigerator,3,Moderate,0.14,1.03,23.8
+Meat & Poultry,0.73,4,2,Freezer,2,Moderate,0.24,0.0,0.0
+Seafood,2.18,2,2,Refrigerator,3,Fast,0.3,0.36,16.4
+Bakery,1.38,3,0,Pantry / Room Temp,4,Moderate,0.16,0.7,50.5
+Seafood,4.16,3,3,Freezer,2,Fast,0.14,0.4,9.7
+Beverages,1.64,21,4,Refrigerator,3,Moderate,0.25,0.44,26.9
+Seafood,4.62,2,1,Freezer,1,Moderate,0.09,0.8,17.3
+Snacks,5.66,59,36,Refrigerator,4,Fast,0.08,0.68,12.0
+Grains & Cereals,6.78,65,49,Refrigerator,2,Fast,0.25,0.82,12.0
+Seafood,2.46,2,2,Refrigerator,3,Fast,0.02,0.21,8.4
+Grains & Cereals,4.77,76,8,Refrigerator,4,Slow,0.13,2.2,46.2
+Grains & Cereals,3.22,61,3,Refrigerator,4,Fast,0.37,0.66,20.4
+Bakery,1.66,7,7,Refrigerator,1,Moderate,0.02,0.34,20.5
+Dairy & Eggs,2.25,11,11,Pantry / Room Temp,2,Moderate,0.19,1.11,49.5
+Fruits & Vegetables,1.32,9,0,Refrigerator,2,Slow,0.09,0.64,48.7
+Bakery,3.73,4,0,Pantry / Room Temp,1,Slow,0.42,3.54,95.0
+Prepared Meals,1.46,4,3,Refrigerator,1,Moderate,0.05,0.37,25.5
+Snacks,2.32,98,28,Refrigerator,2,Slow,0.24,0.93,39.9
+Dairy & Eggs,3.03,14,14,Pantry / Room Temp,5,Moderate,0.1,1.28,42.2
+Prepared Meals,1.33,6,2,Refrigerator,2,Moderate,0.35,0.46,34.6
+Prepared Meals,1.75,7,2,Freezer,1,Fast,0.28,0.14,7.9
+Grains & Cereals,1.03,96,54,Pantry / Room Temp,2,Moderate,0.31,0.32,31.3
+Dairy & Eggs,3.14,5,2,Freezer,3,Moderate,0.2,0.25,7.9
+Seafood,1.49,3,0,Refrigerator,3,Fast,0.22,0.3,20.3
+Snacks,2.94,68,4,Refrigerator,2,Moderate,0.2,0.87,29.6
+Beverages,0.73,9,3,Pantry / Room Temp,2,Moderate,0.24,0.26,35.8
+Meat & Poultry,0.67,4,1,Refrigerator,3,Fast,0.45,0.18,26.3
+Dairy & Eggs,1.01,6,4,Refrigerator,2,Slow,0.52,0.3,29.9
+Dairy & Eggs,1.7,10,5,Pantry / Room Temp,3,Moderate,0.08,1.29,75.9
+Seafood,1.42,2,0,Pantry / Room Temp,1,Slow,0.04,1.35,95.0
+Prepared Meals,3.44,2,2,Refrigerator,8,Fast,0.27,0.44,12.8
+Seafood,1.22,3,1,Freezer,4,Moderate,0.15,0.13,10.9
+Prepared Meals,1.21,5,4,Refrigerator,3,Slow,0.25,0.27,22.1
+Prepared Meals,1.34,5,5,Refrigerator,3,Fast,0.57,0.21,15.6
+Meat & Poultry,1.17,4,3,Refrigerator,3,Moderate,0.05,0.09,7.3
+Prepared Meals,1.92,5,0,Pantry / Room Temp,1,Fast,0.15,0.76,39.5
+Beverages,8.02,3,3,Refrigerator,3,Slow,0.04,2.26,28.1
+Seafood,2.05,3,2,Pantry / Room Temp,6,Fast,0.23,0.81,39.6
+Beverages,0.85,12,9,Refrigerator,3,Moderate,0.11,0.12,13.8
+Seafood,7.95,2,0,Refrigerator,1,Moderate,0.2,6.25,78.6
+Prepared Meals,2.07,2,2,Refrigerator,2,Moderate,0.5,0.63,30.5
+Snacks,6.44,66,32,Pantry / Room Temp,2,Moderate,0.12,2.97,46.2
+Prepared Meals,6.98,3,2,Pantry / Room Temp,8,Slow,0.29,3.49,50.0
+Bakery,2.18,2,0,Refrigerator,1,Fast,0.23,0.66,30.2
+Snacks,0.71,90,1,Refrigerator,3,Slow,0.02,0.25,35.7
+Snacks,1.37,77,60,Pantry / Room Temp,2,Moderate,0.17,0.19,13.9
+Dairy & Eggs,2.18,12,12,Freezer,3,Moderate,0.07,0.0,0.0
+Grains & Cereals,0.99,90,43,Refrigerator,4,Moderate,0.14,0.12,12.3
+Bakery,3.9,7,5,Pantry / Room Temp,4,Slow,0.14,2.09,53.7
+Grains & Cereals,4.98,15,2,Refrigerator,2,Moderate,0.24,2.13,42.9
+Beverages,3.72,17,10,Refrigerator,2,Moderate,0.07,1.06,28.5
+Beverages,2.34,16,0,Freezer,4,Fast,0.12,0.0,0.0
+Dairy & Eggs,4.06,12,12,Freezer,2,Fast,0.32,0.0,0.0
+Snacks,1.43,125,46,Refrigerator,1,Moderate,0.46,0.36,25.2
+Dairy & Eggs,1.3,8,4,Freezer,2,Moderate,0.14,0.12,9.5
+Fruits & Vegetables,0.74,5,2,Freezer,4,Moderate,0.21,0.08,11.3
+Seafood,0.82,2,1,Pantry / Room Temp,3,Moderate,0.46,0.65,79.6
+Prepared Meals,2.92,4,2,Refrigerator,3,Moderate,0.06,0.85,29.2
+Seafood,1.4,4,4,Pantry / Room Temp,4,Moderate,0.13,0.5,36.0
+Beverages,2.53,16,14,Freezer,2,Moderate,0.16,0.26,10.4
+Grains & Cereals,0.79,57,12,Refrigerator,2,Slow,0.18,0.25,31.8
+Fruits & Vegetables,1.51,8,4,Refrigerator,3,Moderate,0.34,0.42,28.0
+Beverages,6.56,13,0,Freezer,2,Moderate,0.18,0.12,1.9
+Dairy & Eggs,5.46,5,5,Refrigerator,3,Slow,0.37,1.67,30.7
+Beverages,1.89,12,0,Freezer,4,Fast,0.07,0.0,0.0
+Grains & Cereals,2.15,36,1,Freezer,2,Slow,0.07,0.29,13.5
+Prepared Meals,6.56,4,1,Pantry / Room Temp,2,Slow,0.23,6.23,95.0
+Grains & Cereals,2.58,46,35,Refrigerator,2,Slow,0.36,0.7,27.2
+Fruits & Vegetables,1.29,7,4,Refrigerator,2,Slow,0.03,0.28,21.7
+Dairy & Eggs,0.9,9,0,Refrigerator,1,Moderate,0.38,0.35,38.7
+Beverages,4.5,7,0,Refrigerator,1,Moderate,0.12,2.5,55.6
+Prepared Meals,0.57,5,2,Freezer,4,Moderate,0.19,0.07,11.5
+Seafood,1.22,1,0,Pantry / Room Temp,4,Moderate,0.29,1.16,95.0
+Fruits & Vegetables,1.69,6,3,Refrigerator,1,Moderate,0.02,0.64,37.9
+Beverages,1.8,18,4,Pantry / Room Temp,2,Slow,0.01,0.92,51.1
+Seafood,1.29,4,1,Refrigerator,3,Slow,0.35,0.54,41.9
+Prepared Meals,3.37,5,5,Freezer,4,Fast,0.11,0.0,0.0
+Seafood,7.88,1,0,Refrigerator,3,Moderate,0.1,3.97,50.4
+Bakery,4.04,4,2,Pantry / Room Temp,2,Fast,0.36,1.21,30.1
+Snacks,0.88,61,48,Pantry / Room Temp,1,Moderate,0.27,0.24,26.7
+Fruits & Vegetables,3.02,7,5,Freezer,6,Fast,0.21,0.0,0.0
+Bakery,9.03,3,0,Pantry / Room Temp,2,Moderate,0.09,7.91,87.6
+Meat & Poultry,2.92,3,3,Freezer,1,Fast,0.12,0.0,0.0
+Seafood,8.92,4,4,Refrigerator,1,Fast,0.37,3.44,38.6
+Dairy & Eggs,1.23,12,12,Refrigerator,3,Moderate,0.05,0.06,5.2
+Fruits & Vegetables,3.9,7,7,Refrigerator,4,Moderate,0.03,0.63,16.0
+Snacks,1.13,87,36,Refrigerator,4,Slow,0.07,0.23,20.2
+Beverages,2.12,1,0,Freezer,3,Slow,0.1,0.12,5.9
+Meat & Poultry,3.48,3,2,Refrigerator,4,Moderate,0.23,0.75,21.6
+Fruits & Vegetables,2.28,7,1,Refrigerator,3,Moderate,0.18,0.75,33.1
+Prepared Meals,5.28,2,1,Freezer,3,Slow,0.11,0.2,3.8
+Snacks,0.88,88,17,Pantry / Room Temp,1,Moderate,0.29,0.32,36.8
+Meat & Poultry,1.27,5,1,Freezer,2,Slow,0.14,0.07,5.7
+Grains & Cereals,1.43,73,55,Pantry / Room Temp,2,Moderate,0.27,0.34,23.5
+Grains & Cereals,2.65,53,18,Refrigerator,2,Moderate,0.24,0.5,18.8
+Prepared Meals,5.63,5,4,Refrigerator,2,Moderate,0.2,1.71,30.3
+Beverages,1.48,8,7,Refrigerator,3,Fast,0.13,0.1,6.8
+Meat & Poultry,3.42,3,2,Refrigerator,2,Slow,0.09,0.98,28.7
+Bakery,0.52,5,1,Refrigerator,3,Slow,0.42,0.22,43.1
+Snacks,1.74,125,57,Refrigerator,3,Moderate,0.27,0.34,19.6
+Beverages,2.3,24,21,Refrigerator,6,Moderate,0.2,0.36,15.7
+Grains & Cereals,3.54,68,52,Pantry / Room Temp,1,Moderate,0.04,1.2,33.8
+Meat & Poultry,0.91,3,1,Refrigerator,3,Moderate,0.05,0.18,19.5
+Prepared Meals,0.67,3,1,Freezer,1,Moderate,0.19,0.0,0.0
+Dairy & Eggs,1.43,6,3,Refrigerator,2,Moderate,0.5,0.4,27.9
+Beverages,1.91,8,4,Refrigerator,2,Slow,0.18,0.47,24.6
+Snacks,2.01,145,2,Refrigerator,1,Moderate,0.23,0.6,29.9
+Dairy & Eggs,1.69,5,5,Refrigerator,2,Moderate,0.13,0.24,14.4
+Meat & Poultry,5.83,5,5,Refrigerator,1,Slow,0.13,3.16,54.2
+Dairy & Eggs,2.4,10,6,Refrigerator,2,Moderate,0.19,0.56,23.4
+Dairy & Eggs,5.44,11,5,Pantry / Room Temp,2,Slow,0.15,5.17,95.0
+Fruits & Vegetables,5.2,1,0,Freezer,1,Slow,0.36,0.88,16.9
+Meat & Poultry,1.05,3,2,Refrigerator,3,Moderate,0.16,0.19,18.2
+Beverages,0.66,9,7,Refrigerator,3,Slow,0.19,0.09,14.1
+Meat & Poultry,1.79,5,0,Pantry / Room Temp,1,Moderate,0.15,1.7,95.0
+Grains & Cereals,0.82,69,62,Refrigerator,2,Fast,0.26,0.04,4.4
+Beverages,2.14,14,0,Freezer,1,Moderate,0.15,0.19,8.7
+Fruits & Vegetables,0.98,8,2,Refrigerator,2,Moderate,0.12,0.36,36.3
+Grains & Cereals,3.32,84,24,Pantry / Room Temp,1,Moderate,0.12,1.92,57.7
+Fruits & Vegetables,2.45,6,4,Refrigerator,3,Moderate,0.01,0.44,18.1
+Dairy & Eggs,2.04,10,7,Refrigerator,2,Slow,0.17,0.58,28.3
+Seafood,3.2,1,1,Refrigerator,1,Moderate,0.21,0.57,17.8
+Prepared Meals,2.86,4,3,Refrigerator,2,Moderate,0.03,0.76,26.6
+Seafood,1.0,2,0,Pantry / Room Temp,1,Moderate,0.13,0.95,95.0
+Snacks,2.38,66,59,Freezer,2,Fast,0.32,0.08,3.5
+Dairy & Eggs,2.97,13,13,Freezer,2,Fast,0.22,0.1,3.5
+Bakery,2.55,7,7,Refrigerator,1,Moderate,0.01,0.46,18.0
+Seafood,1.3,3,1,Refrigerator,1,Fast,0.11,0.4,30.7
+Bakery,2.78,5,1,Freezer,2,Slow,0.25,0.34,12.2
+Dairy & Eggs,0.8,3,1,Refrigerator,3,Moderate,0.22,0.27,33.6
+Prepared Meals,0.51,3,2,Refrigerator,4,Fast,0.5,0.04,8.0
+Meat & Poultry,1.03,5,5,Refrigerator,3,Fast,0.11,0.02,1.6
+Seafood,2.47,2,2,Refrigerator,1,Slow,0.19,0.82,33.1
+Snacks,0.96,123,4,Pantry / Room Temp,5,Slow,0.35,0.56,57.9
+Dairy & Eggs,2.39,10,7,Refrigerator,2,Fast,0.37,0.42,17.7
+Meat & Poultry,3.1,4,2,Pantry / Room Temp,2,Moderate,0.24,2.91,94.0
+Beverages,6.25,13,9,Refrigerator,3,Moderate,0.28,1.66,26.6
+Bakery,2.98,5,5,Refrigerator,2,Fast,0.23,0.47,15.8
+Prepared Meals,3.17,3,0,Pantry / Room Temp,2,Moderate,0.07,2.07,65.2
+Grains & Cereals,2.69,73,39,Refrigerator,6,Fast,0.13,0.28,10.3
+Grains & Cereals,1.65,18,3,Refrigerator,1,Moderate,0.47,0.65,39.6
+Fruits & Vegetables,1.2,9,7,Refrigerator,3,Slow,0.18,0.34,28.4
+Dairy & Eggs,0.6,9,3,Refrigerator,2,Moderate,0.22,0.21,35.4
+Prepared Meals,1.78,1,0,Pantry / Room Temp,1,Moderate,0.26,1.19,66.9
+Beverages,3.15,6,5,Freezer,8,Moderate,0.19,0.12,3.9
+Bakery,0.55,4,4,Refrigerator,2,Fast,0.14,0.08,13.8
+Seafood,0.77,2,2,Refrigerator,3,Slow,0.17,0.05,6.9
+Dairy & Eggs,1.25,10,3,Freezer,3,Slow,0.28,0.16,13.0
+Seafood,2.63,2,0,Refrigerator,1,Moderate,0.12,1.3,49.5
+Seafood,6.8,1,0,Freezer,3,Moderate,0.33,0.51,7.5
+Seafood,0.65,3,2,Refrigerator,3,Slow,0.45,0.18,27.7
+Snacks,0.57,60,44,Pantry / Room Temp,4,Moderate,0.25,0.07,11.7
+Meat & Poultry,2.64,4,0,Refrigerator,4,Moderate,0.27,1.15,43.7
+Seafood,5.94,3,3,Refrigerator,1,Moderate,0.28,2.53,42.6
+Fruits & Vegetables,0.62,8,3,Pantry / Room Temp,2,Moderate,0.24,0.29,46.5
+Grains & Cereals,1.18,49,22,Pantry / Room Temp,3,Slow,0.06,0.4,33.6
+Bakery,0.54,6,3,Freezer,2,Moderate,0.15,0.06,11.4
+Snacks,5.5,36,33,Refrigerator,6,Slow,0.3,1.16,21.0
+Prepared Meals,1.14,1,1,Refrigerator,2,Moderate,0.14,0.13,11.0
+Prepared Meals,0.6,5,1,Pantry / Room Temp,1,Slow,0.24,0.41,68.9
+Dairy & Eggs,1.78,8,6,Freezer,2,Moderate,0.19,0.06,3.5
+Meat & Poultry,2.25,2,0,Refrigerator,1,Fast,0.28,0.3,13.4
+Beverages,4.51,17,13,Freezer,1,Moderate,0.22,0.16,3.5
+Fruits & Vegetables,4.49,7,0,Pantry / Room Temp,1,Fast,0.09,2.47,55.1
+Beverages,2.07,12,9,Pantry / Room Temp,2,Slow,0.34,1.0,48.3
+Prepared Meals,0.76,2,2,Pantry / Room Temp,3,Moderate,0.41,0.19,24.8
+Fruits & Vegetables,1.45,10,10,Pantry / Room Temp,2,Moderate,0.29,0.3,20.7
+Dairy & Eggs,1.72,9,7,Freezer,3,Moderate,0.12,0.06,3.8
+Grains & Cereals,2.71,59,7,Freezer,2,Moderate,0.35,0.18,6.7
+Snacks,2.05,162,64,Refrigerator,2,Slow,0.21,0.77,37.5
+Seafood,1.18,2,2,Refrigerator,2,Moderate,0.25,0.16,13.3
+Meat & Poultry,4.13,1,0,Pantry / Room Temp,3,Fast,0.04,2.87,69.5
+Prepared Meals,1.79,3,1,Pantry / Room Temp,4,Moderate,0.31,0.68,37.8
+Dairy & Eggs,2.31,7,1,Freezer,2,Moderate,0.23,0.31,13.5
+Meat & Poultry,1.03,4,4,Refrigerator,3,Slow,0.31,0.13,12.6
+Seafood,2.39,4,0,Refrigerator,2,Moderate,0.11,1.1,45.8
+Snacks,2.24,77,4,Refrigerator,2,Fast,0.29,0.6,26.6
+Grains & Cereals,0.88,63,21,Refrigerator,1,Moderate,0.1,0.16,17.7
+Prepared Meals,6.54,3,1,Freezer,3,Fast,0.06,0.53,8.1
+Fruits & Vegetables,8.32,7,0,Pantry / Room Temp,1,Moderate,0.49,7.9,95.0
+Fruits & Vegetables,1.29,6,4,Refrigerator,1,Fast,0.35,0.25,19.6
+Seafood,4.84,4,4,Refrigerator,4,Moderate,0.27,0.78,16.1
+Seafood,4.13,2,1,Freezer,2,Slow,0.16,0.35,8.4
+Prepared Meals,3.26,4,3,Freezer,2,Slow,0.2,0.08,2.4
+Meat & Poultry,3.63,2,0,Refrigerator,3,Moderate,0.15,1.48,40.6
+Bakery,0.7,5,5,Pantry / Room Temp,4,Moderate,0.08,0.21,29.9
+Prepared Meals,2.27,2,0,Refrigerator,1,Slow,0.02,1.39,61.1
+Grains & Cereals,1.35,70,27,Freezer,3,Moderate,0.2,0.0,0.2
+Prepared Meals,1.46,5,2,Refrigerator,4,Moderate,0.1,0.43,29.8
+Seafood,4.2,3,1,Refrigerator,4,Fast,0.41,0.65,15.5
+Grains & Cereals,1.31,22,14,Refrigerator,2,Slow,0.29,0.26,20.1
+Snacks,0.73,88,39,Freezer,1,Moderate,0.18,0.05,6.4
+Prepared Meals,0.85,3,2,Pantry / Room Temp,10,Moderate,0.29,0.22,26.3
+Fruits & Vegetables,2.82,5,0,Refrigerator,4,Slow,0.23,1.51,53.4
+Fruits & Vegetables,0.74,10,7,Refrigerator,2,Moderate,0.44,0.15,19.7
+Bakery,2.47,6,2,Pantry / Room Temp,1,Slow,0.18,2.07,83.8
+Snacks,2.06,137,111,Pantry / Room Temp,5,Moderate,0.1,0.49,23.7
+Fruits & Vegetables,3.2,4,4,Pantry / Room Temp,3,Moderate,0.2,0.85,26.7
+Fruits & Vegetables,3.46,7,5,Refrigerator,2,Fast,0.27,0.53,15.4
+Beverages,1.53,18,18,Pantry / Room Temp,1,Moderate,0.16,0.41,27.1
+Meat & Poultry,0.71,2,1,Freezer,5,Slow,0.13,0.04,5.7
+Dairy & Eggs,1.86,11,11,Pantry / Room Temp,3,Fast,0.28,0.51,27.5
+Snacks,9.34,153,9,Pantry / Room Temp,4,Moderate,0.15,5.48,58.6
+Beverages,2.67,11,9,Freezer,2,Moderate,0.18,0.26,9.6
+Bakery,1.91,6,3,Refrigerator,2,Slow,0.12,0.65,33.9
+Snacks,0.76,87,21,Refrigerator,3,Moderate,0.13,0.11,14.8
+Bakery,1.94,3,2,Pantry / Room Temp,3,Moderate,0.09,0.64,32.9
+Seafood,3.32,2,2,Freezer,1,Slow,0.23,0.14,4.2
+Meat & Poultry,0.74,5,4,Refrigerator,2,Fast,0.12,0.06,7.5
+Seafood,3.96,4,2,Refrigerator,2,Slow,0.16,1.66,42.0
+Beverages,3.32,18,18,Refrigerator,1,Moderate,0.2,1.0,30.0
+Seafood,4.63,3,1,Refrigerator,3,Moderate,0.35,2.06,44.4
+Fruits & Vegetables,4.83,3,1,Pantry / Room Temp,2,Moderate,0.08,2.53,52.4
+Prepared Meals,0.54,3,0,Freezer,4,Moderate,0.14,0.02,4.4
+Grains & Cereals,5.4,61,42,Freezer,1,Slow,0.35,0.57,10.5
+Snacks,1.17,109,22,Refrigerator,5,Fast,0.42,0.2,17.1
+Dairy & Eggs,2.33,3,1,Refrigerator,3,Moderate,0.14,0.75,32.4
+Prepared Meals,1.01,3,2,Refrigerator,4,Moderate,0.12,0.19,19.0
+Beverages,1.38,15,10,Pantry / Room Temp,3,Moderate,0.1,0.45,32.5
+Bakery,0.57,6,4,Refrigerator,3,Moderate,0.06,0.14,25.2
+Beverages,0.55,20,16,Freezer,3,Slow,0.41,0.0,0.0
+Grains & Cereals,3.76,67,22,Freezer,4,Moderate,0.29,0.19,5.1
+Dairy & Eggs,3.63,6,2,Refrigerator,1,Slow,0.06,2.1,57.7
+Meat & Poultry,1.44,2,1,Freezer,8,Moderate,0.14,0.24,16.5
+Meat & Poultry,1.34,2,0,Pantry / Room Temp,4,Slow,0.09,1.27,95.0
+Bakery,2.8,6,0,Refrigerator,1,Moderate,0.33,1.22,43.6
+Dairy & Eggs,0.68,12,5,Refrigerator,2,Moderate,0.04,0.18,26.2
+Snacks,1.21,108,11,Refrigerator,2,Moderate,0.12,0.4,32.7
+Meat & Poultry,4.63,4,2,Freezer,2,Fast,0.17,0.42,9.1
+Beverages,2.04,13,2,Freezer,8,Fast,0.19,0.13,6.2
+Beverages,2.72,25,11,Refrigerator,3,Slow,0.13,1.06,38.9
+Beverages,1.88,13,3,Pantry / Room Temp,2,Slow,0.17,1.21,64.4
+Fruits & Vegetables,3.66,10,0,Pantry / Room Temp,1,Moderate,0.09,2.92,79.6
+Fruits & Vegetables,3.79,9,5,Pantry / Room Temp,3,Moderate,0.25,1.58,41.6
+Meat & Poultry,1.8,4,2,Refrigerator,4,Fast,0.29,0.4,22.2
+Bakery,1.04,6,6,Refrigerator,3,Moderate,0.28,0.18,16.9
+Seafood,5.34,2,1,Pantry / Room Temp,2,Moderate,0.44,5.07,95.0
+Meat & Poultry,1.37,6,0,Pantry / Room Temp,4,Fast,0.11,0.86,62.8
+Seafood,5.72,2,0,Freezer,3,Moderate,0.16,0.73,12.8
+Dairy & Eggs,3.97,11,3,Refrigerator,3,Moderate,0.08,1.2,30.3
+Snacks,5.95,85,47,Pantry / Room Temp,2,Moderate,0.21,3.01,50.6
+Snacks,1.14,72,36,Refrigerator,4,Moderate,0.15,0.22,19.0
+Snacks,3.56,94,50,Pantry / Room Temp,2,Moderate,0.4,1.24,34.9
+Fruits & Vegetables,4.32,7,4,Pantry / Room Temp,1,Moderate,0.19,2.43,56.4
+Seafood,2.19,3,2,Refrigerator,2,Fast,0.07,0.37,17.1
+Dairy & Eggs,0.93,13,7,Freezer,5,Moderate,0.47,0.15,16.3
+Prepared Meals,1.18,1,1,Refrigerator,2,Slow,0.2,0.35,29.7
+Fruits & Vegetables,2.61,7,6,Refrigerator,2,Moderate,0.03,0.39,15.0
+Meat & Poultry,1.48,4,4,Pantry / Room Temp,5,Moderate,0.15,0.67,45.4
+Fruits & Vegetables,0.82,12,9,Freezer,2,Moderate,0.41,0.02,2.5
+Beverages,0.7,15,3,Refrigerator,3,Slow,0.18,0.26,37.4
+Dairy & Eggs,0.72,12,3,Freezer,4,Moderate,0.28,0.01,1.6
+Dairy & Eggs,1.54,8,8,Refrigerator,3,Moderate,0.26,0.25,16.4
+Meat & Poultry,5.37,3,3,Refrigerator,5,Fast,0.09,0.76,14.2
+Meat & Poultry,2.41,1,1,Freezer,2,Slow,0.21,0.09,3.6
+Seafood,3.01,2,1,Pantry / Room Temp,2,Slow,0.41,2.86,95.0
+Bakery,3.82,7,1,Freezer,5,Moderate,0.21,0.32,8.3
+Bakery,2.04,5,0,Refrigerator,1,Moderate,0.2,0.96,47.1
+Beverages,2.18,10,7,Refrigerator,2,Moderate,0.26,0.61,28.0
+Beverages,2.29,13,3,Refrigerator,2,Moderate,0.11,0.56,24.2
+Fruits & Vegetables,2.8,4,0,Refrigerator,1,Moderate,0.23,1.23,44.0
+Snacks,1.93,65,39,Refrigerator,2,Moderate,0.03,0.34,17.6
+Beverages,1.67,12,9,Refrigerator,3,Moderate,0.08,0.22,13.3
+Snacks,0.61,113,6,Pantry / Room Temp,4,Fast,0.14,0.16,26.9
+Grains & Cereals,1.44,67,56,Pantry / Room Temp,2,Slow,0.11,0.39,27.4
+Seafood,0.9,2,0,Refrigerator,2,Fast,0.17,0.17,19.4
+Bakery,1.07,6,6,Freezer,3,Slow,0.13,0.03,2.6
+Beverages,0.6,15,3,Pantry / Room Temp,3,Moderate,0.23,0.2,33.8
+Grains & Cereals,0.76,101,7,Freezer,3,Slow,0.09,0.08,10.2
+Bakery,0.78,5,1,Refrigerator,2,Moderate,0.16,0.28,35.4
+Seafood,3.53,3,1,Refrigerator,4,Slow,0.47,1.76,49.8
+Snacks,0.82,121,45,Pantry / Room Temp,2,Moderate,0.33,0.34,41.2
+Meat & Poultry,2.24,4,1,Refrigerator,3,Moderate,0.24,0.45,20.0
+Grains & Cereals,3.4,33,4,Refrigerator,3,Slow,0.16,1.19,34.9
+Bakery,3.08,5,0,Freezer,2,Slow,0.23,0.21,6.7
+Snacks,1.74,142,109,Refrigerator,3,Fast,0.1,0.11,6.4
+Prepared Meals,1.28,4,4,Refrigerator,3,Slow,0.14,0.21,16.7
+Grains & Cereals,0.55,42,15,Refrigerator,2,Moderate,0.12,0.11,20.5
+Bakery,1.85,2,2,Pantry / Room Temp,4,Moderate,0.2,0.37,20.2
+Fruits & Vegetables,4.07,5,2,Refrigerator,3,Moderate,0.17,1.42,34.8
+Seafood,3.84,4,2,Pantry / Room Temp,2,Slow,0.05,3.65,95.0
+Fruits & Vegetables,2.24,8,7,Freezer,2,Slow,0.16,0.03,1.3
+Bakery,0.73,1,1,Refrigerator,2,Moderate,0.52,0.12,16.3
+Prepared Meals,4.84,4,3,Freezer,3,Moderate,0.19,0.0,0.0
+Bakery,4.52,6,6,Freezer,3,Moderate,0.37,0.19,4.1
+Fruits & Vegetables,1.82,5,4,Refrigerator,2,Moderate,0.15,0.3,16.7
+Snacks,3.02,58,12,Refrigerator,4,Moderate,0.05,0.65,21.6
+Fruits & Vegetables,1.7,5,4,Pantry / Room Temp,4,Moderate,0.22,0.5,29.7
+Grains & Cereals,4.96,26,3,Freezer,3,Slow,0.12,0.78,15.8
+Grains & Cereals,1.47,56,51,Refrigerator,2,Moderate,0.32,0.38,25.9
+Dairy & Eggs,3.93,7,6,Refrigerator,2,Fast,0.17,0.73,18.6
+Seafood,1.35,2,2,Pantry / Room Temp,2,Slow,0.32,0.92,68.0
+Dairy & Eggs,0.99,12,2,Refrigerator,2,Moderate,0.1,0.19,19.2
+Fruits & Vegetables,2.24,10,5,Pantry / Room Temp,2,Slow,0.14,1.3,58.2
+Bakery,2.4,6,0,Freezer,2,Slow,0.09,0.45,19.0
+Grains & Cereals,2.31,24,22,Freezer,2,Fast,0.29,0.11,4.7
+Beverages,6.86,19,5,Refrigerator,2,Moderate,0.21,2.63,38.3
+Bakery,5.72,3,3,Refrigerator,1,Moderate,0.06,2.67,46.6
+Fruits & Vegetables,1.58,9,9,Pantry / Room Temp,1,Slow,0.09,0.5,31.7
+Meat & Poultry,2.84,4,3,Pantry / Room Temp,1,Moderate,0.14,2.47,87.0
+Prepared Meals,4.64,5,2,Freezer,1,Moderate,0.23,0.5,10.7
+Fruits & Vegetables,1.42,3,3,Freezer,3,Moderate,0.19,0.02,1.1
+Fruits & Vegetables,1.45,9,2,Refrigerator,1,Slow,0.39,0.75,52.0
+Dairy & Eggs,2.31,9,6,Refrigerator,2,Moderate,0.11,0.36,15.4
+Grains & Cereals,1.45,45,26,Pantry / Room Temp,5,Moderate,0.2,0.21,14.2
+Grains & Cereals,0.67,46,26,Freezer,4,Fast,0.02,0.11,16.6
+Fruits & Vegetables,2.03,8,2,Refrigerator,2,Moderate,0.27,0.57,28.1
+Snacks,2.91,87,73,Refrigerator,2,Fast,0.2,0.53,18.1
+Dairy & Eggs,1.19,7,0,Refrigerator,4,Slow,0.22,0.54,45.7
+Fruits & Vegetables,1.62,6,2,Refrigerator,3,Slow,0.14,0.63,39.0
+Prepared Meals,1.44,2,2,Freezer,3,Fast,0.34,0.06,3.9
+Snacks,0.83,125,117,Freezer,1,Fast,0.22,0.0,0.0
+Meat & Poultry,2.29,1,0,Refrigerator,1,Moderate,0.15,0.91,39.9
+Prepared Meals,4.51,4,3,Freezer,4,Slow,0.04,0.45,10.0
+Meat & Poultry,0.83,5,0,Refrigerator,1,Moderate,0.18,0.28,34.0
+Snacks,2.96,83,27,Freezer,2,Moderate,0.15,0.11,3.9
+Fruits & Vegetables,0.95,4,1,Refrigerator,4,Fast,0.18,0.21,22.1
+Meat & Poultry,2.03,3,3,Freezer,1,Moderate,0.31,0.03,1.3
+Dairy & Eggs,1.52,13,2,Pantry / Room Temp,4,Moderate,0.06,1.44,95.0
+Fruits & Vegetables,0.93,7,5,Refrigerator,2,Moderate,0.18,0.14,15.5
+Fruits & Vegetables,6.62,2,2,Freezer,4,Moderate,0.07,0.19,2.9
+Snacks,3.11,150,115,Pantry / Room Temp,2,Fast,0.29,0.58,18.6
+Seafood,5.15,2,2,Pantry / Room Temp,2,Fast,0.25,2.52,49.0
+Snacks,2.31,116,23,Pantry / Room Temp,2,Moderate,0.19,0.87,37.6
+Dairy & Eggs,3.53,14,13,Pantry / Room Temp,2,Fast,0.53,1.89,53.5
+Prepared Meals,2.0,5,3,Refrigerator,3,Moderate,0.03,0.48,24.0
+Seafood,2.86,2,1,Refrigerator,4,Slow,0.07,0.93,32.5
+Seafood,0.71,1,1,Refrigerator,4,Moderate,0.2,0.07,9.2
+Bakery,6.86,6,3,Freezer,3,Fast,0.19,0.45,6.6
+Beverages,2.85,16,2,Refrigerator,1,Fast,0.34,0.89,31.1
+Meat & Poultry,3.38,3,0,Refrigerator,2,Fast,0.13,1.07,31.5
+Meat & Poultry,1.23,4,2,Refrigerator,5,Moderate,0.06,0.33,27.2
+Grains & Cereals,1.17,49,2,Refrigerator,1,Fast,0.25,0.2,17.0
+Dairy & Eggs,3.37,8,8,Refrigerator,1,Moderate,0.13,0.84,25.1
+Prepared Meals,1.73,5,1,Refrigerator,6,Fast,0.15,0.34,19.6
+Grains & Cereals,2.95,18,2,Refrigerator,2,Moderate,0.21,0.6,20.4
+Bakery,1.11,3,0,Pantry / Room Temp,1,Slow,0.28,1.02,91.7
+Dairy & Eggs,1.31,6,6,Refrigerator,3,Fast,0.07,0.13,10.3
+Prepared Meals,3.93,5,4,Freezer,1,Fast,0.57,0.28,7.0
+Seafood,2.97,3,0,Refrigerator,2,Moderate,0.18,1.23,41.5
+Seafood,0.5,3,2,Freezer,8,Moderate,0.07,0.04,7.5
+Dairy & Eggs,1.15,5,0,Freezer,4,Fast,0.17,0.17,14.8
+Dairy & Eggs,4.58,9,5,Pantry / Room Temp,1,Moderate,0.11,4.35,95.0
+Grains & Cereals,4.14,37,12,Refrigerator,4,Slow,0.11,1.44,34.7
+Grains & Cereals,8.81,53,43,Refrigerator,1,Moderate,0.17,4.45,50.5
+Dairy & Eggs,0.74,13,2,Pantry / Room Temp,2,Slow,0.01,0.7,95.0
+Snacks,1.34,98,94,Pantry / Room Temp,3,Slow,0.15,0.18,13.1
+Meat & Poultry,1.81,3,3,Refrigerator,2,Moderate,0.26,0.32,17.4
+Fruits & Vegetables,1.95,4,0,Pantry / Room Temp,4,Moderate,0.25,1.21,62.1
+Bakery,4.07,5,5,Pantry / Room Temp,2,Moderate,0.2,1.28,31.4
+Prepared Meals,1.05,2,2,Refrigerator,3,Moderate,0.13,0.17,16.1
+Dairy & Eggs,4.14,11,10,Refrigerator,6,Moderate,0.13,0.55,13.2
+Beverages,5.76,12,6,Refrigerator,4,Moderate,0.15,1.34,23.2
+Meat & Poultry,8.51,5,2,Freezer,2,Moderate,0.02,1.03,12.1
+Snacks,3.59,93,20,Refrigerator,8,Fast,0.15,0.43,11.8
+Snacks,0.72,108,31,Pantry / Room Temp,1,Fast,0.01,0.17,23.5
+Prepared Meals,1.39,3,2,Refrigerator,5,Slow,0.43,0.37,26.3
+Meat & Poultry,2.1,4,1,Freezer,6,Moderate,0.49,0.19,8.8
+Grains & Cereals,0.59,72,1,Refrigerator,2,Moderate,0.22,0.12,21.0
+Dairy & Eggs,0.79,7,2,Pantry / Room Temp,3,Fast,0.24,0.46,58.3
+Grains & Cereals,0.99,93,31,Refrigerator,5,Slow,0.14,0.22,22.6
+Grains & Cereals,0.95,66,23,Pantry / Room Temp,1,Fast,0.28,0.18,19.0
+Snacks,4.85,75,7,Refrigerator,2,Fast,0.07,0.49,10.1
+Bakery,0.7,5,0,Pantry / Room Temp,3,Moderate,0.25,0.39,55.7
+Beverages,2.43,6,4,Freezer,3,Slow,0.1,0.04,1.5
+Bakery,0.98,2,0,Refrigerator,1,Fast,0.35,0.25,25.9
+Bakery,0.57,3,0,Refrigerator,1,Moderate,0.08,0.2,35.8
+Bakery,2.82,7,7,Refrigerator,3,Moderate,0.13,0.44,15.7
+Snacks,2.38,108,48,Freezer,3,Slow,0.22,0.53,22.2
+Fruits & Vegetables,1.87,6,3,Refrigerator,1,Moderate,0.4,0.7,37.5
+Dairy & Eggs,0.82,7,1,Refrigerator,1,Slow,0.13,0.33,40.1
+Grains & Cereals,4.63,87,35,Pantry / Room Temp,4,Fast,0.11,0.97,20.9
+Beverages,0.94,6,3,Refrigerator,4,Moderate,0.17,0.23,24.3
+Meat & Poultry,1.37,2,2,Pantry / Room Temp,2,Slow,0.27,0.96,70.3
+Fruits & Vegetables,0.59,7,2,Refrigerator,2,Moderate,0.35,0.2,34.3
+Dairy & Eggs,1.25,13,4,Freezer,2,Fast,0.1,0.13,10.2
+Grains & Cereals,6.63,58,10,Refrigerator,1,Moderate,0.11,3.13,47.2
+Meat & Poultry,3.6,1,0,Pantry / Room Temp,1,Moderate,0.24,3.42,95.0
+Meat & Poultry,3.19,1,1,Freezer,3,Moderate,0.44,0.0,0.0
+Beverages,0.74,10,9,Pantry / Room Temp,3,Moderate,0.41,0.21,28.0
+Dairy & Eggs,2.01,3,3,Refrigerator,2,Moderate,0.11,0.4,19.9
+Snacks,2.44,84,8,Refrigerator,4,Moderate,0.23,0.38,15.7
+Meat & Poultry,2.67,3,1,Pantry / Room Temp,1,Slow,0.13,2.54,95.0
+Fruits & Vegetables,2.37,3,1,Refrigerator,3,Slow,0.1,1.09,45.8
+Bakery,0.87,4,3,Pantry / Room Temp,2,Moderate,0.03,0.38,43.4
+Snacks,3.18,113,67,Refrigerator,2,Moderate,0.03,0.57,18.0
+Prepared Meals,4.11,6,0,Refrigerator,4,Moderate,0.09,1.58,38.5
+Beverages,1.25,10,9,Refrigerator,1,Fast,0.36,0.19,15.5
+Prepared Meals,0.64,3,2,Refrigerator,1,Moderate,0.3,0.15,22.7
+Beverages,1.13,21,11,Refrigerator,8,Moderate,0.32,0.2,17.7
+Fruits & Vegetables,0.51,11,1,Freezer,1,Slow,0.24,0.07,13.4
+Prepared Meals,1.1,3,2,Refrigerator,4,Moderate,0.05,0.21,19.4
+Bakery,4.89,6,3,Freezer,3,Moderate,0.03,0.51,10.4
+Meat & Poultry,1.53,1,0,Refrigerator,6,Fast,0.14,0.24,15.7
+Meat & Poultry,3.12,4,0,Refrigerator,4,Moderate,0.29,1.16,37.2
+Snacks,3.93,118,9,Refrigerator,8,Moderate,0.2,1.11,28.3
+Beverages,0.92,11,1,Pantry / Room Temp,2,Moderate,0.26,0.5,54.2
+Beverages,2.5,18,14,Pantry / Room Temp,3,Slow,0.08,0.75,30.2
+Fruits & Vegetables,1.74,5,0,Freezer,4,Moderate,0.16,0.26,14.8
+Seafood,2.68,3,3,Refrigerator,6,Moderate,0.38,0.38,14.3
+Bakery,1.95,4,1,Refrigerator,2,Moderate,0.06,0.53,27.4
+Snacks,4.08,80,67,Refrigerator,2,Fast,0.23,0.26,6.4
+Prepared Meals,4.83,1,1,Freezer,1,Fast,0.26,0.54,11.2
+Grains & Cereals,3.7,52,28,Refrigerator,3,Slow,0.21,0.88,23.7
+Fruits & Vegetables,2.32,6,0,Refrigerator,1,Fast,0.12,0.64,27.7
+Beverages,1.12,6,4,Pantry / Room Temp,3,Moderate,0.31,0.29,25.7
+Fruits & Vegetables,5.26,8,5,Pantry / Room Temp,4,Slow,0.23,2.88,54.7
+Bakery,5.79,3,1,Refrigerator,2,Moderate,0.2,2.42,41.8
+Seafood,9.39,2,2,Refrigerator,3,Slow,0.16,3.14,33.5
+Grains & Cereals,1.4,101,76,Refrigerator,3,Fast,0.34,0.28,19.7
+Prepared Meals,2.87,3,3,Refrigerator,1,Fast,0.12,0.74,25.6
+Meat & Poultry,3.14,2,0,Refrigerator,1,Slow,0.03,1.93,61.4
+Seafood,3.82,3,0,Freezer,10,Fast,0.04,0.19,4.9
+Seafood,1.68,3,0,Refrigerator,2,Moderate,0.13,0.67,39.8
+Dairy & Eggs,4.5,7,0,Pantry / Room Temp,1,Fast,0.04,4.27,95.0
+Bakery,1.87,1,0,Freezer,1,Fast,0.17,0.04,2.1
+Prepared Meals,4.88,2,2,Refrigerator,2,Moderate,0.1,1.28,26.2
+Seafood,1.04,1,1,Refrigerator,4,Moderate,0.24,0.19,18.2
+Prepared Meals,0.82,2,1,Freezer,2,Moderate,0.18,0.04,4.9
+Dairy & Eggs,3.83,9,0,Freezer,2,Moderate,0.09,0.36,9.3
+Beverages,1.52,11,9,Freezer,1,Moderate,0.33,0.04,2.5
+Snacks,2.38,90,49,Refrigerator,2,Slow,0.28,0.61,25.6
+Dairy & Eggs,10.25,7,7,Pantry / Room Temp,2,Fast,0.11,6.66,65.0
+Meat & Poultry,2.41,5,5,Pantry / Room Temp,1,Slow,0.2,2.29,95.0
+Prepared Meals,0.96,3,1,Freezer,5,Slow,0.16,0.17,17.4
+Beverages,2.2,21,11,Freezer,3,Slow,0.11,0.12,5.7
+Dairy & Eggs,0.65,15,13,Freezer,2,Slow,0.03,0.0,0.3
+Seafood,1.31,3,1,Freezer,2,Slow,0.21,0.14,10.6
+Bakery,6.7,1,1,Freezer,8,Moderate,0.37,0.35,5.2
+Prepared Meals,5.7,5,1,Refrigerator,4,Fast,0.11,1.53,26.8
+Beverages,3.09,19,9,Refrigerator,4,Moderate,0.41,0.55,17.7
+Dairy & Eggs,1.41,7,1,Freezer,4,Moderate,0.06,0.11,7.8
+Snacks,3.38,66,31,Pantry / Room Temp,3,Moderate,0.29,1.26,37.4
+Seafood,3.08,2,0,Refrigerator,1,Moderate,0.33,1.7,55.1
+Meat & Poultry,1.67,1,0,Refrigerator,6,Moderate,0.34,0.65,38.8
+Snacks,2.33,88,79,Refrigerator,2,Moderate,0.1,0.35,15.1
+Grains & Cereals,0.68,73,59,Refrigerator,3,Slow,0.08,0.03,3.8
+Prepared Meals,1.6,4,1,Freezer,3,Moderate,0.14,0.18,11.5
+Seafood,0.54,2,0,Refrigerator,3,Fast,0.1,0.13,24.8
+Meat & Poultry,4.52,5,2,Refrigerator,1,Moderate,0.2,1.64,36.2
+Meat & Poultry,0.59,6,2,Pantry / Room Temp,2,Slow,0.16,0.56,95.0
+Beverages,5.12,12,10,Refrigerator,2,Moderate,0.09,1.18,23.0
+Dairy & Eggs,2.74,8,1,Refrigerator,2,Moderate,0.22,1.06,38.7
+Seafood,5.33,5,2,Refrigerator,1,Moderate,0.12,3.19,59.8
+Bakery,1.15,4,3,Pantry / Room Temp,4,Moderate,0.24,0.31,27.2
+Fruits & Vegetables,6.19,10,1,Refrigerator,2,Moderate,0.05,3.24,52.3
+Prepared Meals,5.64,5,1,Refrigerator,1,Fast,0.32,2.57,45.6
+Grains & Cereals,4.99,75,58,Refrigerator,4,Moderate,0.1,0.68,13.6
+Bakery,1.49,4,2,Refrigerator,4,Moderate,0.1,0.32,21.6
+Prepared Meals,1.06,4,1,Refrigerator,5,Slow,0.15,0.38,35.5
+Bakery,2.49,5,2,Refrigerator,3,Moderate,0.54,1.13,45.3
+Grains & Cereals,1.88,73,4,Refrigerator,3,Fast,0.57,0.45,23.7
+Dairy & Eggs,1.04,10,9,Freezer,4,Slow,0.22,0.0,0.0
+Fruits & Vegetables,2.76,8,8,Refrigerator,3,Moderate,0.3,0.75,27.1
+Dairy & Eggs,3.23,14,14,Freezer,2,Moderate,0.26,0.17,5.3
+Fruits & Vegetables,1.65,3,1,Pantry / Room Temp,3,Moderate,0.06,0.64,38.7
+Bakery,2.42,7,6,Refrigerator,1,Moderate,0.21,0.75,31.0
+Meat & Poultry,2.3,1,0,Refrigerator,3,Moderate,0.27,0.89,38.5
+Grains & Cereals,4.31,30,24,Pantry / Room Temp,3,Moderate,0.09,0.68,15.7
+Meat & Poultry,1.63,3,3,Pantry / Room Temp,1,Slow,0.15,1.49,91.3
+Beverages,1.26,22,4,Refrigerator,4,Moderate,0.23,0.34,27.2
+Prepared Meals,0.96,3,2,Pantry / Room Temp,2,Slow,0.02,0.33,33.9
+Prepared Meals,0.96,7,6,Refrigerator,4,Moderate,0.21,0.2,21.3
+Dairy & Eggs,4.04,10,7,Freezer,4,Moderate,0.5,0.0,0.0
+Bakery,1.66,6,2,Pantry / Room Temp,5,Slow,0.17,0.94,56.6
+Dairy & Eggs,4.64,6,6,Refrigerator,3,Moderate,0.24,1.24,26.6
+Meat & Poultry,5.44,3,3,Refrigerator,3,Slow,0.15,0.97,17.8
+Dairy & Eggs,0.65,12,12,Freezer,1,Slow,0.24,0.05,7.9
+Prepared Meals,2.93,6,2,Refrigerator,4,Fast,0.2,0.78,26.5
+Seafood,2.44,1,1,Refrigerator,4,Slow,0.27,0.4,16.5
+Seafood,4.45,2,1,Freezer,2,Moderate,0.2,0.66,14.9
+Fruits & Vegetables,1.03,5,3,Refrigerator,3,Moderate,0.17,0.29,27.8
+Seafood,0.51,2,1,Refrigerator,3,Moderate,0.12,0.14,27.2
+Meat & Poultry,3.1,4,3,Pantry / Room Temp,3,Moderate,0.49,2.34,75.3
+Meat & Poultry,1.73,2,1,Pantry / Room Temp,3,Moderate,0.07,1.16,67.3
+Prepared Meals,4.75,4,0,Refrigerator,2,Slow,0.23,2.96,62.3
+Grains & Cereals,1.95,57,20,Refrigerator,3,Slow,0.21,0.67,34.4
+Bakery,5.17,2,0,Pantry / Room Temp,2,Moderate,0.24,3.94,76.2
+Grains & Cereals,2.5,96,44,Refrigerator,2,Moderate,0.03,0.52,21.0
+Grains & Cereals,5.44,66,15,Refrigerator,2,Fast,0.25,1.46,26.9
+Prepared Meals,1.5,5,3,Pantry / Room Temp,4,Moderate,0.24,0.52,34.7
+Snacks,1.98,115,10,Refrigerator,1,Slow,0.41,0.89,44.9
+Meat & Poultry,1.65,5,2,Pantry / Room Temp,2,Slow,0.18,1.57,95.0
+Dairy & Eggs,1.08,11,6,Pantry / Room Temp,4,Slow,0.48,1.03,95.0
+Meat & Poultry,1.25,4,4,Pantry / Room Temp,3,Slow,0.18,0.68,54.4
+Dairy & Eggs,1.01,15,2,Refrigerator,5,Fast,0.4,0.17,16.4
+Snacks,2.77,136,33,Refrigerator,4,Moderate,0.13,0.65,23.6
+Grains & Cereals,2.0,78,14,Pantry / Room Temp,3,Slow,0.23,1.25,62.4
+Beverages,2.39,10,5,Freezer,4,Moderate,0.14,0.08,3.2
+Seafood,1.84,2,0,Refrigerator,3,Slow,0.04,1.05,56.8
+Bakery,7.98,6,4,Pantry / Room Temp,2,Slow,0.2,7.29,91.3
+Dairy & Eggs,2.36,11,11,Pantry / Room Temp,3,Moderate,0.02,1.03,43.6
+Bakery,1.87,6,2,Freezer,4,Fast,0.21,0.01,0.3
+Meat & Poultry,2.71,6,1,Refrigerator,4,Slow,0.06,1.37,50.4
+Grains & Cereals,0.98,89,12,Refrigerator,2,Moderate,0.35,0.2,20.7

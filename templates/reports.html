@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+
+{% block title %}Reports &amp; Analytics - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-bar-chart-line-fill text-success me-2"></i>Reports &amp; Analytics
+        </h2>
+        <p class="text-muted mb-0">Actionable insights into consumption patterns, financial impact, and food sustainability</p>
+    </div>
+    <div class="d-flex gap-2">
+        <!-- CSV Export Button -->
+        <a href="{{ url_for('export_csv') }}" class="btn btn-eco-primary shadow-sm">
+            <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Report (CSV)
+        </a>
+    </div>
+</div>
+
+<!-- Time Range Filters -->
+<div class="card border-0 shadow-sm p-3 mb-4">
+    <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
+        <div class="d-flex gap-2 align-items-center">
+            <span class="small fw-semibold text-muted"><i class="bi bi-calendar3 me-1"></i>Report Period:</span>
+            <a href="{{ url_for('reports', range='all') }}" class="btn btn-sm {% if time_range == 'all' %}btn-eco-primary{% else %}btn-outline-secondary{% endif %}">
+                All Time
+            </a>
+            <a href="{{ url_for('reports', range='30days') }}" class="btn btn-sm {% if time_range == '30days' %}btn-eco-primary{% else %}btn-outline-secondary{% endif %}">
+                Last 30 Days
+            </a>
+            <a href="{{ url_for('reports', range='7days') }}" class="btn btn-sm {% if time_range == '7days' %}btn-eco-primary{% else %}btn-outline-secondary{% endif %}">
+                Last 7 Days
+            </a>
+        </div>
+        <div class="small text-muted">
+            Top Wasted Category: <strong class="text-danger">{{ top_wasted_category }}</strong>
+        </div>
+    </div>
+</div>
+
+<!-- 5 KPI Summary Cards -->
+<div class="row g-3 mb-4">
+    <!-- Total Purchased -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card p-3 h-100 card-dashboard">
+            <span class="small text-muted fw-semibold">Total Purchased</span>
+            <h3 class="fw-bold mb-1 text-dark">{{ total_purchased_qty }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-muted">Tracked in inventory</span>
+        </div>
+    </div>
+
+    <!-- Total Consumed (Saved) -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card p-3 h-100 card-dashboard">
+            <span class="small text-muted fw-semibold">Food Consumed (Saved)</span>
+            <h3 class="fw-bold mb-1 text-success">{{ total_consumed_qty }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-success fw-semibold">${{ "%.2f"|format(total_food_saved_cost) }} value eaten</span>
+        </div>
+    </div>
+
+    <!-- Total Wasted -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card p-3 h-100 card-dashboard border-danger">
+            <span class="small text-muted fw-semibold">Total Food Wasted</span>
+            <h3 class="fw-bold mb-1 text-danger">{{ total_wasted_qty }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-muted">Loss across kitchen</span>
+        </div>
+    </div>
+
+    <!-- Financial Loss -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card p-3 h-100 card-dashboard border-orange">
+            <span class="small text-muted fw-semibold">Estimated Money Lost</span>
+            <h3 class="fw-bold mb-1 text-danger">${{ "%.2f"|format(total_waste_cost) }}</h3>
+            <span class="small text-danger fw-semibold">Avoidable kitchen loss</span>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Section -->
+<div class="row g-4 mb-4">
+    <!-- Chart 1: Monthly Waste Trends -->
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-graph-up text-success me-2"></i>Monthly Waste Trend (kg)
+                </h5>
+                <span class="badge bg-light text-muted border">Past 6 Months</span>
+            </div>
+            <div style="position: relative; height: 280px;">
+                <canvas id="monthlyTrendChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart 2: Category Breakdown -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-pie-chart text-warning me-2"></i>Waste by Category
+                </h5>
+            </div>
+            <div style="position: relative; height: 280px;">
+                <canvas id="reportCategoryChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart 3: Reasons for Food Waste -->
+    <div class="col-12">
+        <div class="card border-0 shadow-sm p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-bar-chart text-danger me-2"></i>Root Causes of Food Waste (kg)
+                </h5>
+                <span class="small text-muted">Helps target behavioral changes</span>
+            </div>
+            <div style="position: relative; height: 250px;">
+                <canvas id="reasonsChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Smart Recommendations Section -->
+<div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <div class="d-flex align-items-center mb-4">
+        <div class="metric-icon-box metric-icon-orange me-3">
+            <i class="bi bi-lightbulb-fill fs-3 text-warning"></i>
+        </div>
+        <div>
+            <h4 class="fw-bold text-dark mb-0">System Recommendations &amp; Interventions</h4>
+            <p class="text-muted small mb-0">Tailored strategies based on your waste trends and inventory dynamics</p>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="recommendation-card h-100">
+                <h6 class="fw-bold text-dark mb-1"><i class="bi bi-cart-check text-success me-2"></i>Optimize Purchase Volumes</h6>
+                <p class="small text-muted mb-0">
+                    If your top wasted category is <strong>{{ top_wasted_category }}</strong>, consider purchasing smaller quantities more frequently or switching to smaller pack sizes.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="recommendation-card h-100" style="border-left-color: #f57c00;">
+                <h6 class="fw-bold text-dark mb-1"><i class="bi bi-snow text-info me-2"></i>Storage Temperature Audit</h6>
+                <p class="small text-muted mb-0">
+                    Verify that your refrigerator is kept between 1°C and 4°C and freezer at -18°C. Every 2°C increase can accelerate bacterial spoilage by 40%.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="recommendation-card h-100" style="border-left-color: #198754;">
+                <h6 class="fw-bold text-dark mb-1"><i class="bi bi-calendar-check text-success me-2"></i>Meal Prep &amp; FIFO Method</h6>
+                <p class="small text-muted mb-0">
+                    Follow the "First-In, First-Out" protocol. When unpacking new groceries, pull existing batches to the front shelf for dinner planning.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="recommendation-card h-100" style="border-left-color: #dc3545;">
+                <h6 class="fw-bold text-dark mb-1"><i class="bi bi-heart text-danger me-2"></i>Surplus Donation Channel</h6>
+                <p class="small text-muted mb-0">
+                    List surplus items on your Food Donation Board at least 2 days before the expiry date so local charity volunteers have sufficient pickup lead time.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Monthly Waste Line Chart
+    const monthLabels = {{ month_labels | tojson }};
+    const monthValues = {{ month_values | tojson }};
+
+    const ctxMonth = document.getElementById('monthlyTrendChart');
+    if (ctxMonth) {
+        new Chart(ctxMonth, {
+            type: 'line',
+            data: {
+                labels: monthLabels,
+                datasets: [{
+                    label: 'Food Wasted (kg)',
+                    data: monthValues,
+                    borderColor: '#198754',
+                    backgroundColor: 'rgba(25, 135, 84, 0.15)',
+                    borderWidth: 2.5,
+                    fill: true,
+                    tension: 0.35,
+                    pointBackgroundColor: '#f57c00',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v + ' kg' },
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    }
+
+    // 2. Category Doughnut Chart
+    const catLabels = {{ category_labels | tojson }};
+    const catValues = {{ category_values | tojson }};
+
+    const ctxCat = document.getElementById('reportCategoryChart');
+    if (ctxCat) {
+        if (catValues.length === 0) {
+            new Chart(ctxCat, {
+                type: 'doughnut',
+                data: {
+                    labels: ['No Waste Recorded'],
+                    datasets: [{ data: [1], backgroundColor: ['#e2e8f0'] }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+        } else {
+            new Chart(ctxCat, {
+                type: 'doughnut',
+                data: {
+                    labels: catLabels,
+                    datasets: [{
+                        data: catValues,
+                        backgroundColor: [
+                            '#198754', '#f57c00', '#dc3545', '#0dcaf0',
+                            '#6f42c1', '#fd7e14', '#20c997', '#ffc107', '#6c757d'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
+    }
+
+    // 3. Reasons Bar Chart
+    const reasonLabels = {{ reason_labels | tojson }};
+    const reasonValues = {{ reason_values | tojson }};
+
+    const ctxReason = document.getElementById('reasonsChart');
+    if (ctxReason) {
+        new Chart(ctxReason, {
+            type: 'bar',
+            data: {
+                labels: reasonLabels.length > 0 ? reasonLabels : ['No Reasons Logged'],
+                datasets: [{
+                    label: 'Waste Volume (kg)',
+                    data: reasonValues.length > 0 ? reasonValues : [0],
+                    backgroundColor: '#f57c00',
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v + ' kg' },
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

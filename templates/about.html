@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}About - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="mb-4">
+    <h2 class="fw-bold mb-1 text-dark">
+        <i class="bi bi-info-circle-fill text-success me-2"></i>About the Project
+    </h2>
+    <p class="text-muted mb-0">Smart Food Waste Reduction System &bull; Technology, Architecture &amp; Global Impact</p>
+</div>
+
+<!-- Project Mission & SDG Alignment -->
+<div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+            <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-semibold mb-2">Sustainable Development</span>
+            <h3 class="fw-bold text-dark mb-3">Targeting Zero Hunger &amp; Responsible Consumption</h3>
+            <p class="text-muted">
+                Globally, approximately <strong>1.3 billion tonnes</strong> of food are wasted every year—equivalent to one-third of all food produced for human consumption. In addition to ethical and economic impacts, food waste accounts for 8-10% of global greenhouse gas emissions.
+            </p>
+            <p class="text-muted mb-0">
+                The <strong>Smart Food Waste Reduction System</strong> empowers consumers, cafeteria operators, and hospitality kitchens to proactively address this crisis through inventory monitoring, intelligent shelf-life tracking, Scikit-learn machine learning forecasts, and safe surplus food donation.
+            </p>
+        </div>
+        <div class="col-lg-4 text-center">
+            <div class="p-4 bg-light rounded-4 border">
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <div class="p-3 bg-warning text-dark rounded-3 shadow-sm fw-bold">
+                        <i class="bi bi-recycle fs-2 d-block"></i>
+                        SDG 12
+                    </div>
+                    <div class="p-3 bg-danger text-white rounded-3 shadow-sm fw-bold">
+                        <i class="bi bi-heart fs-2 d-block"></i>
+                        SDG 2
+                    </div>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">UN Global Goals</h6>
+                <p class="small text-muted mb-0">Target 12.3: Halve per capita global food waste by 2030</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Technology Stack -->
+<div class="card border-0 shadow-sm p-4 mb-4">
+    <h4 class="fw-bold text-dark mb-4">
+        <i class="bi bi-stack text-success me-2"></i>Comprehensive Technology Stack
+    </h4>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded-3 h-100 border">
+                <h6 class="fw-bold text-success mb-2"><i class="bi bi-layout-wtf me-2"></i>Frontend</h6>
+                <ul class="list-unstyled small text-muted mb-0">
+                    <li>&bull; <strong>HTML5 &amp; CSS3:</strong> Modern semantic layout &amp; design</li>
+                    <li>&bull; <strong>Bootstrap 5.3:</strong> Responsive mobile-first grid</li>
+                    <li>&bull; <strong>Bootstrap Icons:</strong> Visual status indicators</li>
+                    <li>&bull; <strong>JavaScript (ES6):</strong> Client interactions &amp; modals</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded-3 h-100 border">
+                <h6 class="fw-bold text-primary mb-2"><i class="bi bi-server me-2"></i>Backend &amp; Database</h6>
+                <ul class="list-unstyled small text-muted mb-0">
+                    <li>&bull; <strong>Python 3 &amp; Flask 3:</strong> Clean WSGI application</li>
+                    <li>&bull; <strong>SQLite &amp; SQLAlchemy:</strong> Relational ORM models</li>
+                    <li>&bull; <strong>Werkzeug Security:</strong> SHA-256 password hashing</li>
+                    <li>&bull; <strong>Flask Sessions:</strong> Secure user isolation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded-3 h-100 border">
+                <h6 class="fw-bold text-warning-emphasis mb-2"><i class="bi bi-cpu me-2"></i>AI &amp; Data Analytics</h6>
+                <ul class="list-unstyled small text-muted mb-0">
+                    <li>&bull; <strong>Scikit-learn:</strong> RandomForestRegressor pipeline</li>
+                    <li>&bull; <strong>Pandas &amp; NumPy:</strong> Data manipulation &amp; arrays</li>
+                    <li>&bull; <strong>Chart.js:</strong> Interactive canvas charts</li>
+                    <li>&bull; <strong>Joblib:</strong> Pipeline serialization &amp; caching</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Core Architectural Workflows -->
+<div class="card border-0 shadow-sm p-4 mb-4">
+    <h4 class="fw-bold text-dark mb-3">
+        <i class="bi bi-diagram-3 text-success me-2"></i>System Architecture &amp; Workflow
+    </h4>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="border rounded-3 p-3 h-100">
+                <h5 class="fw-bold text-dark mb-2">1. Three-Tier Expiry Classification</h5>
+                <p class="small text-muted mb-2">
+                    Every active food item is checked dynamically against today's date:
+                </p>
+                <div class="mb-2">
+                    <span class="badge badge-fresh me-2">Fresh</span>
+                    <small class="text-muted">Remaining days &gt; 3. Safe, optimal nutritional state.</small>
+                </div>
+                <div class="mb-2">
+                    <span class="badge badge-expiring me-2">Expiring Soon</span>
+                    <small class="text-muted">Remaining days 0 to 3. Actionable urgency triggers recommendations.</small>
+                </div>
+                <div>
+                    <span class="badge badge-expired me-2">Expired</span>
+                    <small class="text-muted">Days &lt; 0. Strictly excluded from consumption &amp; donation.</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="border rounded-3 p-3 h-100">
+                <h5 class="fw-bold text-dark mb-2">2. Machine Learning Regression Pipeline</h5>
+                <p class="small text-muted mb-2">
+                    Features evaluated: <code>Category</code>, <code>Quantity</code>, <code>Shelf Life</code>, <code>Days Remaining</code>, <code>Storage Type</code>, <code>Consumers</code>, <code>Pace</code>.
+                </p>
+                <ul class="small text-muted mb-0">
+                    <li>Categorical variables are encoded using <code>OneHotEncoder</code>.</li>
+                    <li>Continuous metrics are standardized via <code>StandardScaler</code>.</li>
+                    <li><code>RandomForestRegressor</code> outputs estimated waste percentage and volume.</li>
+                    <li>Automated mitigation logic delivers category-specific advice.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="border rounded-3 p-3 h-100">
+                <h5 class="fw-bold text-dark mb-2">3. Food Safety Guardrails in Donation</h5>
+                <p class="small text-muted mb-0">
+                    To protect vulnerable recipient populations, our system enforces strict safety checks:
+                    any food marked past its expiry date or improperly stored cannot be listed for donation. 
+                    Users can easily reserve and track donation completion with recipient shelters.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="border rounded-3 p-3 h-100">
+                <h5 class="fw-bold text-dark mb-2">4. Data Export &amp; Auditing</h5>
+                <p class="small text-muted mb-0">
+                    Provides built-in CSV export generation for hospitality audit logs, restaurant tax incentives on charitable food donations, and academic waste research.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Deployment Guidance for Organizations -->
+<div class="card border-0 shadow-sm p-4">
+    <h4 class="fw-bold text-dark mb-3">
+        <i class="bi bi-buildings text-success me-2"></i>Multi-Sector Applications
+    </h4>
+    <div class="row g-3">
+        <div class="col-md-3">
+            <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-house-door fs-2 text-success mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">Home Kitchens</h6>
+                <p class="small text-muted mb-0">Prevents forgotten vegetables, reduces grocery bills by up to $1,500/year.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-shop fs-2 text-primary mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">Restaurants &amp; Cafes</h6>
+                <p class="small text-muted mb-0">Maintains inventory par levels, isolates prep waste, and streamlines donation.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-mortarboard fs-2 text-warning mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">College Canteens</h6>
+                <p class="small text-muted mb-0">Prevents high-volume buffet waste and feeds student pantry food programs.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-light rounded-3 text-center">
+                <i class="bi bi-cart3 fs-2 text-danger mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">Supermarkets</h6>
+                <p class="small text-muted mb-0">Monitors shelf batches and coordinates volunteer food rescue pickups.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

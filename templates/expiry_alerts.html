@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Expiry Alerts - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-bell-fill text-warning me-2"></i>Expiry Alert Center
+        </h2>
+        <p class="text-muted mb-0">Prioritize items needing immediate kitchen attention or safe disposal</p>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('inventory') }}" class="btn btn-outline-success">
+            <i class="bi bi-box-seam me-1"></i> View All Inventory
+        </a>
+        <a href="{{ url_for('donations') }}" class="btn btn-warning text-dark fw-bold">
+            <i class="bi bi-heart me-1"></i> Food Donation Board
+        </a>
+    </div>
+</div>
+
+<!-- SECTION 1: Expiring Soon (Within 3 Days) -->
+<div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center">
+            <div class="metric-icon-box metric-icon-orange me-3">
+                <i class="bi bi-hourglass-bottom fs-3 text-warning"></i>
+            </div>
+            <div>
+                <h4 class="fw-bold mb-0 text-dark">Items Expiring Soon (&le; 3 Days)</h4>
+                <p class="text-muted small mb-0">Recommend using in immediate recipes, meal-prepping, or donating.</p>
+            </div>
+        </div>
+        <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">{{ expiring_soon_items|length }} Actionable</span>
+    </div>
+
+    {% if expiring_soon_items %}
+        <div class="row g-3">
+            {% for item in expiring_soon_items %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-warning shadow-sm p-3 position-relative" style="background-color: #fffdf8;">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="fw-bold mb-0 text-dark">{{ item.food_name }}</h5>
+                        <span class="badge bg-warning text-dark fw-bold">
+                            {% if item.days_remaining == 0 %}
+                                TODAY!
+                            {% elif item.days_remaining == 1 %}
+                                1 Day Left
+                            {% else %}
+                                {{ item.days_remaining }} Days Left
+                            {% endif %}
+                        </span>
+                    </div>
+
+                    <div class="small text-muted mb-2">
+                        <i class="bi bi-tag me-1"></i>{{ item.category }} &bull;
+                        <i class="bi bi-basket me-1"></i><strong>{{ item.quantity }} {{ item.unit }}</strong>
+                    </div>
+
+                    <div class="small text-secondary mb-3">
+                        <i class="bi bi-calendar-event me-1"></i>Expiry: <strong>{{ item.expiry_date.strftime('%B %d, %Y') }}</strong><br>
+                        <i class="bi bi-snow me-1"></i>Storage: {{ item.storage_type }}
+                    </div>
+
+                    <!-- Smart Usage Recommendation -->
+                    <div class="recommendation-card p-2 small mb-3 bg-white" style="border-left-color: #f57c00;">
+                        <i class="bi bi-lightbulb text-warning me-1"></i>
+                        {% if item.category == 'Fruits & Vegetables' %}
+                            Ideal for soup broths, stir-fries, or blend &amp; freeze as smoothies.
+                        {% elif item.category == 'Dairy & Eggs' %}
+                            Use in omelets, quiches, baked casseroles, or pancakes.
+                        {% elif item.category == 'Bakery' %}
+                            Toast immediately, make breadcrumbs, or freeze in sealed bags.
+                        {% elif item.category in ['Meat & Poultry', 'Seafood'] %}
+                            Cook thoroughly tonight or freeze in airtight bags at -18°C.
+                        {% else %}
+                            Incorporate into today's meal plan or share with colleagues/neighbors.
+                        {% endif %}
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="d-flex gap-2 mt-auto pt-2 border-top">
+                        <!-- Mark Consumed -->
+                        <form method="POST" action="{{ url_for('mark_consumed', item_id=item.id) }}" class="flex-grow-1">
+                            <button type="submit" class="btn btn-sm btn-success w-100 fw-semibold" title="Mark as Eaten">
+                                <i class="bi bi-check2-circle me-1"></i> Eaten / Saved
+                            </button>
+                        </form>
+                        
+                        <!-- List for Donation -->
+                        <a href="{{ url_for('donations') }}" class="btn btn-sm btn-outline-warning text-dark fw-semibold" title="Donate Surplus">
+                            <i class="bi bi-heart me-1"></i> Donate
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-4 bg-light rounded-3 text-muted">
+            <i class="bi bi-check2-circle fs-2 text-success d-block mb-2"></i>
+            No items currently expiring within 3 days. Your inventory is fresh and on schedule!
+        </div>
+    {% endif %}
+</div>
+
+<!-- SECTION 2: Expired Items (Strict Safety Exclusion) -->
+<div class="card border-0 shadow-sm p-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center">
+            <div class="metric-icon-box metric-icon-red me-3">
+                <i class="bi bi-x-octagon-fill fs-3 text-danger"></i>
+            </div>
+            <div>
+                <h4 class="fw-bold mb-0 text-dark">Expired Food Items</h4>
+                <p class="text-muted small mb-0">Safety Warning: Excluded from consumption and donation recommendations.</p>
+            </div>
+        </div>
+        <span class="badge bg-danger fs-6 px-3 py-2 rounded-pill">{{ expired_items|length }} Expired</span>
+    </div>
+
+    <!-- Clear Safety Notice -->
+    <div class="alert alert-danger-box mb-3 py-2 px-3 small">
+        <i class="bi bi-shield-x me-1"></i>
+        <strong>Health &amp; Safety Rule:</strong> Expired food may harbor microbial contamination or toxins. Do not consume or donate expired food items. Please log them into Waste Tracking and dispose/compost responsibly.
+    </div>
+
+    {% if expired_items %}
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Expired Since</th>
+                        <th>Safety Status</th>
+                        <th class="text-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in expired_items %}
+                    <tr class="table-danger-subtle">
+                        <td><strong>{{ item.food_name }}</strong></td>
+                        <td><span class="badge bg-light text-dark border">{{ item.category }}</span></td>
+                        <td>{{ item.quantity }} {{ item.unit }}</td>
+                        <td class="text-danger fw-bold">
+                            {{ item.expiry_date.strftime('%Y-%m-%d') }} ({{ item.days_remaining|abs }} days ago)
+                        </td>
+                        <td>
+                            <span class="badge bg-danger text-white">
+                                <i class="bi bi-exclamation-octagon me-1"></i>Unsafe / Expired
+                            </span>
+                        </td>
+                        <td class="text-end">
+                            <form method="POST" action="{{ url_for('mark_wasted', item_id=item.id) }}" class="d-inline">
+                                <input type="hidden" name="reason" value="Past Expiry Date">
+                                <button type="submit" class="btn btn-sm btn-danger fw-semibold">
+                                    <i class="bi bi-trash3 me-1"></i> Log as Waste &amp; Remove
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="text-center py-4 bg-light rounded-3 text-muted">
+            <i class="bi bi-shield-check fs-2 text-success d-block mb-2"></i>
+            No expired items in your inventory. Excellent kitchen rotation!
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

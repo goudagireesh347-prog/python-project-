@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center py-4">
+    <div class="col-md-7 col-lg-6">
+        <div class="card shadow-md border-0 p-4 p-md-5">
+            <div class="text-center mb-4">
+                <div class="metric-icon-box metric-icon-green mx-auto mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-person-plus-fill fs-3 text-success"></i>
+                </div>
+                <h3 class="fw-bold text-dark">Create Account</h3>
+                <p class="text-muted small">Start monitoring inventory and reducing kitchen food waste</p>
+            </div>
+
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-semibold">Username <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="e.g. greenkitchen" required minlength="3">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="full_name" class="form-label fw-semibold">Full Name / Facility Name</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-badge-ad"></i></span>
+                        <input type="text" class="form-control" id="full_name" name="full_name" placeholder="e.g. Alex Green or Hilltop Cafe">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="organization_type" class="form-label fw-semibold">Facility / Kitchen Type</label>
+                    <select class="form-select" id="organization_type" name="organization_type">
+                        <option value="Household" selected>Household / Home Kitchen</option>
+                        <option value="College Canteen">College / University Canteen</option>
+                        <option value="Restaurant">Restaurant / Bistro</option>
+                        <option value="Hotel">Hotel / Hospitality Kitchen</option>
+                        <option value="Supermarket">Supermarket / Grocery Store</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="password" class="form-label fw-semibold">Password <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="At least 6 chars" required minlength="6">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="confirm_password" class="form-label fw-semibold">Confirm Password <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-lock-fill"></i></span>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Re-type password" required minlength="6">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-eco-primary w-100 py-2 fs-6 mt-3 shadow-sm">
+                    <i class="bi bi-check2-circle me-1"></i> Register Account
+                </button>
+            </form>
+
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="small text-muted mb-0">Already registered? 
+                    <a href="{{ url_for('login') }}" class="text-success fw-bold">Log in here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

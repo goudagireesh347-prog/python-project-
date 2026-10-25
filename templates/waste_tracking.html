@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block title %}Waste Tracking - Smart Food Waste Reduction System{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+    <div>
+        <h2 class="fw-bold mb-1 text-dark">
+            <i class="bi bi-trash3-fill text-danger me-2"></i>Food Waste Tracking
+        </h2>
+        <p class="text-muted mb-0">Record and diagnose waste reasons to reduce kitchen losses and protect your budget</p>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('reports') }}" class="btn btn-outline-success">
+            <i class="bi bi-bar-chart-line me-1"></i> Visual Analytics &amp; Reports
+        </a>
+    </div>
+</div>
+
+<!-- Daily, Weekly, Monthly Summary Cards -->
+<div class="row g-3 mb-4">
+    <!-- Daily Waste -->
+    <div class="col-md-4">
+        <div class="card p-3 h-100 card-dashboard border-danger">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Today's Waste</span>
+                <span class="badge bg-danger-subtle text-danger px-2 py-1 rounded">24 Hours</span>
+            </div>
+            <h3 class="fw-bold mb-0 text-dark">{{ daily_waste }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-danger fw-semibold">${{ "%.2f"|format(daily_cost) }} lost today</span>
+        </div>
+    </div>
+
+    <!-- Weekly Waste -->
+    <div class="col-md-4">
+        <div class="card p-3 h-100 card-dashboard border-orange">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Past 7 Days Waste</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis px-2 py-1 rounded">1 Week</span>
+            </div>
+            <h3 class="fw-bold mb-0 text-dark">{{ weekly_waste }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-warning-emphasis fw-semibold">${{ "%.2f"|format(weekly_cost) }} lost this week</span>
+        </div>
+    </div>
+
+    <!-- Monthly Waste -->
+    <div class="col-md-4">
+        <div class="card p-3 h-100 card-dashboard">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small text-muted fw-semibold">Past 30 Days Waste</span>
+                <span class="badge bg-success-subtle text-success px-2 py-1 rounded">30 Days</span>
+            </div>
+            <h3 class="fw-bold mb-0 text-dark">{{ monthly_waste }} <span class="fs-6 fw-normal text-muted">kg</span></h3>
+            <span class="small text-muted fw-semibold">${{ "%.2f"|format(monthly_cost) }} total monthly cost</span>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <!-- Log Waste Form -->
+    <div class="col-lg-5">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+                <div class="metric-icon-box metric-icon-red me-3">
+                    <i class="bi bi-journal-plus fs-4 text-danger"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold mb-0 text-dark">Log Waste Incident</h5>
+                    <small class="text-muted">Document wasted food to pinpoint root causes</small>
+                </div>
+            </div>
+
+            <form method="POST" action="{{ url_for('waste_tracking') }}">
+                <div class="mb-3">
+                    <label for="food_name" class="form-label fw-semibold">Food Item Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="food_name" name="food_name" placeholder="e.g. Moldy bread, leftover stir-fry" required>
+                </div>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-md-6">
+                        <label for="category" class="form-label fw-semibold">Category <span class="text-danger">*</span></label>
+                        <select class="form-select" id="category" name="category" required>
+                            {% for cat in categories %}
+                                <option value="{{ cat }}">{{ cat }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="reason" class="form-label fw-semibold">Primary Reason <span class="text-danger">*</span></label>
+                        <select class="form-select" id="reason" name="reason" required>
+                            <option value="Past Expiry Date" selected>Past Expiry Date</option>
+                            <option value="Spoiled / Mold">Spoiled / Mold</option>
+                            <option value="Plate Waste / Leftovers">Plate Waste / Leftovers</option>
+                            <option value="Overcooked / Burnt">Overcooked / Burnt</option>
+                            <option value="Storage Failure">Storage Failure</option>
+                            <option value="Over-purchased">Over-purchased</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <label for="quantity" class="form-label fw-semibold">Quantity Wasted <span class="text-danger">*</span></label>
+                        <input type="number" step="0.1" min="0.1" class="form-control" id="quantity" name="quantity" value="1.0" required>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="unit" class="form-label fw-semibold">Unit</label>
+                        <select class="form-select" id="unit" name="unit">
+                            <option value="kg" selected>kg</option>
+                            <option value="g">g</option>
+                            <option value="liters">liters</option>
+                            <option value="items">items</option>
+                            <option value="servings">servings</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <label for="waste_date" class="form-label fw-semibold">Date of Waste</label>
+                        <input type="date" class="form-control" id="waste_date" name="waste_date" value="{{ today }}">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="estimated_cost" class="form-label fw-semibold">Estimated Cost ($)</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" step="0.01" min="0" class="form-control" id="estimated_cost" name="estimated_cost" placeholder="0.00">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="notes" class="form-label fw-semibold">Preventive Notes / Details</label>
+                    <input type="text" class="form-control" id="notes" name="notes" placeholder="e.g. Fridge thermostat was too warm">
+                </div>
+
+                <button type="submit" class="btn btn-danger w-100 py-2 fw-semibold shadow-sm">
+                    <i class="bi bi-trash3 me-1"></i> Submit Waste Record
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Waste Records Table -->
+    <div class="col-lg-7">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-clock-history text-danger me-2"></i>Waste History Log
+                    <span class="badge bg-light text-dark border ms-1">{{ records|length }}</span>
+                </h5>
+                <a href="{{ url_for('export_csv') }}" class="btn btn-sm btn-outline-success">
+                    <i class="bi bi-download me-1"></i> Download CSV
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Date</th>
+                            <th>Food Item</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Reason</th>
+                            <th>Cost</th>
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if records %}
+                            {% for r in records %}
+                            <tr>
+                                <td><small class="text-muted">{{ r.waste_date.strftime('%b %d, %Y') }}</small></td>
+                                <td>
+                                    <strong class="text-dark">{{ r.food_name }}</strong>
+                                    {% if r.notes %}
+                                    <div class="small text-muted text-truncate" style="max-width: 130px;">{{ r.notes }}</div>
+                                    {% endif %}
+                                </td>
+                                <td><span class="badge bg-light text-dark border">{{ r.category }}</span></td>
+                                <td><strong>{{ r.quantity }}</strong> <small class="text-muted">{{ r.unit }}</small></td>
+                                <td><span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle">{{ r.reason }}</span></td>
+                                <td class="text-danger fw-semibold">${{ "%.2f"|format(r.estimated_cost) }}</td>
+                                <td class="text-end">
+                                    <form method="POST" action="{{ url_for('delete_waste_record', record_id=r.id) }}" class="d-inline" onsubmit="return confirm('Delete this waste entry?');">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary text-danger" title="Delete Entry">
+                                            <i class="bi bi-x-lg"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="7" class="text-center py-5 text-muted">
+                                    <i class="bi bi-emoji-smile fs-2 text-success d-block mb-2"></i>
+                                    No food waste recorded yet! Keep up the great sustainability work.
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
